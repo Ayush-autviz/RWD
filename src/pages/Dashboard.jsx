@@ -17,7 +17,7 @@ const Dashboard = () => {
         <CentreCard className="order-2 md:order-1">
           <div className="mx-0 rounded-[10px]">
             <DonateNowCard />
-            <div className="mt-[20px] grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1  gap-5">
+            <div className="mt-[20px] grid lg:grid-cols-3  md:grid-cols-2 grid-cols-1  gap-5">
               <DashboardCard
                 image="stat (1).png"
                 heading="Running stats"
