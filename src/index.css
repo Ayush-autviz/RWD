@@ -4,9 +4,20 @@
 
 .image-color {
   filter: brightness(0) saturate(100%) invert(18%) sepia(3%) saturate(0%) hue-rotate(203deg) brightness(90%) contrast(87%);
+  padding: 10px;
+  transition: all 1s ease-in-out 0.5s;
 }
 .image-color:hover {
-  filter: brightness(0) saturate(100%) invert(42%) sepia(86%) saturate(3366%) hue-rotate(246deg) brightness(93%) contrast(101%);
+  filter: brightness(0) saturate(100%) invert(66%) sepia(53%) saturate(433%) hue-rotate(77deg) brightness(99%) contrast(101%);
+  background-color: #39393918;
+  padding: 10px;
+  transition: all 1s  ease-in-out;
+  transition-delay: 0s;
+  border-radius: 50%;
+}
+
+.image-color:hover::after {
+  transition-delay: 5s; /* Delay removing the hover effect */
 }
 
 .text-secondary {
@@ -19,5 +30,10 @@
   filter: brightness(0) invert(1);
 }
 .filter-purple {
-  filter: invert(21%) sepia(96%) saturate(7500%) hue-rotate(268deg) brightness(97%) contrast(112%);
+  /* filter: invert(21%) sepia(96%) saturate(7500%) hue-rotate(268deg) brightness(97%) contrast(112%); */
+  filter: hue-rotate(90deg) brightness(1.5);
+}
+
+.image-brown{
+  filter: brightness(0) saturate(100%) invert(18%) sepia(3%) saturate(0%) hue-rotate(203deg) brightness(90%) contrast(87%);
 }
