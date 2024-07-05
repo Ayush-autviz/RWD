@@ -8,13 +8,13 @@ const DonateNowCard = () => {
     <div className='flex justify-between items-center flex-col  lg:flex-row shadow-custom-1 px-[30px] py-[30px]  md:py-[50px] rounded-[10px] relative overflow-hidden '>
     <img src='Ellipse2.svg' className='absolute bottom-0 left-0 z-[-1] '/>
     <div className='lg:order-1 order-2'>
-     <div className='text-secondary center xl:text-left text-center font-poppins text-[25px] font-semibold leading-[30px]'>
+     <div className='text-secondary center lg:text-left text-center font-poppins text-[25px] font-semibold leading-[30px]'>
      Your donation will provide
      </div>
-     <div className='text-secondary center xl-text-left text-center font-poppins text-[16px] font-normal mt-2'>
+     <div className='text-secondary center lg:text-left text-center font-poppins text-[16px] font-normal mt-2'>
      Free groceries for local families experiencing food insecurity
      </div>
-     <div className='flex center xl:left rounded-[5px] cursor-pointer mt-5 xl:w-fit  bg-[#464645] hover:bg-[#2a2a29] duration-200 px-[20px] py-[13px]  flex-row gap-2 items-center justify-center'>
+     <div className=' center xl:left hidden lg:flex rounded-[5px] cursor-pointer mt-5 w-fit  bg-[#464645] hover:bg-[#2a2a29] duration-200 px-[20px] py-[13px]  flex-row gap-2 items-center justify-center'>
          <img className='h-6 w-6' src='donation-1.gif'/>
          <div className='text-white font-poppins text-[14px] font-semibold'>
          Donate Now
@@ -27,6 +27,12 @@ const DonateNowCard = () => {
      <Lottie className='w-[220px] h-[233px] ml-4 mt-[-40px] bg-red ' animationData={maingif} loop={true} />
     
     </div>
+    <div className='flex w-full center xl:left rounded-[5px] lg:hidden cursor-pointer mt-5 order-3  bg-[#464645] hover:bg-[#2a2a29] duration-200 px-[20px] py-[13px]  flex-row gap-2 items-center justify-center'>
+         <img className='h-6 w-6' src='donation-1.gif'/>
+         <div className='text-white font-poppins text-[14px] font-semibold'>
+         Donate Now 
+         </div>
+     </div>
     
  </div>
   )

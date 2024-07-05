@@ -8,7 +8,7 @@ const ProfileCard = () => {
     <div className="bg-[#FBFBFB] flex flex-row items-center justify-between p-5 md:hidden">
 <div>
 </div>
-<div className="font-poppins text-[16px] font-semibold">
+<div className="font-poppins text-[#4db510] text-[16px] font-semibold">
   Grocery Spot
 </div>
 <div >
