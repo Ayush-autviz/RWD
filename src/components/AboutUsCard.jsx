@@ -9,7 +9,7 @@ const AboutUsCard = () => {
             <div className="flex flex-row gap-2 lg:mx-auto">
               <img className="h-[24px] w-[24px]" src="location.svg" />
               <div>
-                Our Location :{" "}
+                Our Location:{" "}
                 <span className="text-[#4db510] cursor-pointer font-semibold">
                   Atlanta,GA
                 </span>
@@ -20,7 +20,7 @@ const AboutUsCard = () => {
             <div className="flex flex-row gap-2 lg:mx-auto">
               <img className="h-[24px] w-[24px]" src="building.svg" />
               <div>
-                Founded : <span className="text-[#4db510] font-semibold">2021</span>
+                Founded: <span className="text-[#4db510] font-semibold">2021</span>
               </div>
             </div>
           </div>
@@ -28,7 +28,7 @@ const AboutUsCard = () => {
             <div className="flex flex-row gap-2  lg:mx-auto">
               <img className="h-[24px] w-[24px]" src="globe.svg" />
               <div>
-                You can find us here :{" "}
+                You can find us here:{" "}
                 <span className="text-[#4db510] cursor-pointer font-semibold">
                   Groceryspot.com
                 </span>
