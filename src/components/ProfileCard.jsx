@@ -5,7 +5,7 @@ import Lottie from "lottie-react";
 const ProfileCard = () => {
   return (
     <div className="min-w-[25%] md:my-[20px] flex-1 md:mr-[20px] md:rounded-[10px] rounded-b-[40px] border border-solid border-[#DFDFDF] bg-[#dddddd24] flex flex-col  items-center py-[20px] px-[20px] relative">
-      <img className="absolute top-3 right-3 cursor-pointer" src="Group 18.svg"/>
+      <img className="absolute top-3 right-5 md:right-3 cursor-pointer" src="Group 18.svg"/>
       <div className="relative">
         <img className=" w-[82px] h-[82px] rounded-full md:w-[133px] md:h-[133px] " src="Rectangle 5.svg" />
         <img className="absolute w-[22px] h-[22px] md:w-[45px] md:h-[45px] right-[-3px] bottom-[3px]  md:bottom-0" src="check.png" />
