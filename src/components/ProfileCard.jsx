@@ -44,7 +44,7 @@ const ProfileCard = () => {
         <div className="w-[39px] h-[39px] mr-2">
       <Lottie className="" animationData={handshake} loop={true} />
       </div>
-        <div className="text-white font-poppins text-[16px] text-center font-semibold">
+        <div className="text-white font-poppins text-[14px] text-center font-semibold">
           Support this cause
         </div>
       </div>
