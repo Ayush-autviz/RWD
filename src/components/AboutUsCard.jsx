@@ -16,8 +16,8 @@ const AboutUsCard = () => {
               </div>
             </div>
           </div>
-          <div className="h-[24px]  xl:border-r border-1 md:border-solid border-[#393939]"/>
-          <div className="flex  flex-row py-1 xl:py-0 text-secondary font-poppins text-[16px] font-medium  gap-2 ">
+          <div className="h-[24px]  hidden xl:block xl:border-r border-1 md:border-solid border-[#393939]"/>
+          <div className="flex  flex-row py-3 xl:py-0 text-secondary font-poppins text-[16px] font-medium  gap-2 ">
             <div className="flex flex-row gap-2 xl:mx-auto">
               <img className="h-[24px] w-[24px]" src="building.svg" />
               <div>
@@ -25,7 +25,7 @@ const AboutUsCard = () => {
               </div>
             </div>
           </div>
-           <div className=" h-[24px] xl:border-r border-1 md:border-solid border-[#393939]"/>
+           <div className=" hidden xl:block h-[24px] xl:border-r border-1 md:border-solid border-[#393939]"/>
           <div className="flex flex-row   text-secondary font-poppins text-[16px] font-medium  gap-2 ">
             <div className="flex flex-row gap-2  xl:mx-auto">
               <img className="h-[24px] w-[24px]" src="globe.svg" />
