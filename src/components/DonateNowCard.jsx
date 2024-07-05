@@ -5,7 +5,7 @@ import maingif from '../assets/maingif.json'
 
 const DonateNowCard = () => {
   return (
-    <div className='flex justify-between flex-col  lg:flex-row shadow-custom-1 px-[30px] py-[30px]  md:py-[50px] rounded-[10px] relative overflow-hidden '>
+    <div className='flex justify-between items-center flex-col  lg:flex-row shadow-custom-1 px-[30px] py-[30px]  md:py-[50px] rounded-[10px] relative overflow-hidden '>
     <img src='Ellipse2.svg' className='absolute bottom-0 left-0 z-[-1] '/>
     <div className='lg:order-1 order-2'>
      <div className='text-secondary center xl:text-left text-center font-poppins text-[25px] font-semibold leading-[30px]'>
