@@ -81,7 +81,8 @@ const ProfileCard = () => {
          1-Time Donation
         </div>
       </div>
-      <div  className="cursor-pointer rounded-[5px] mt-5 w-full  bg-[#464645] hover:bg-[#530f83] duration-200 px-[12px] py-[13px] flex flex-row md:flex-col lg:flex-row gap-2 items-center justify-center">
+      <div  className="cursor-pointer rounded-[5px] mt-5 w-full  bg-[#464645] hover:bg-[#2e2e2e
+] duration-200 px-[12px] py-[13px] flex flex-row md:flex-col lg:flex-row gap-2 items-center justify-center">
         <div className="w-[39px] h-[39px] mr-2">
       <Lottie className="" animationData={handshake} loop={true} />
       </div>
