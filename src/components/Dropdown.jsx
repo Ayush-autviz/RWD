@@ -12,13 +12,13 @@ export default function Dropdown() {
 
       <MenuItems
         transition
-        className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
+        className="absolute overflow-hidden right-0 z-10 mt-2 w-56 origin-top-right rounded-[10px] bg-white shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
       >
-        <div className="py-1">
+        <div className="">
           <MenuItem>
             <a
               href="#"
-              className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900"
+              className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-[#dddddd24] data-[focus]:text-gray-900"
             >
               Account settings
             </a>
@@ -26,7 +26,7 @@ export default function Dropdown() {
           <MenuItem>
             <a
               href="#"
-              className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900"
+              className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-[#dddddd24] data-[focus]:text-gray-900"
             >
               Support
             </a>
@@ -34,7 +34,7 @@ export default function Dropdown() {
           <MenuItem>
             <a
               href="#"
-              className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900"
+              className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-[#dddddd24] data-[focus]:text-gray-900"
             >
               License
             </a>
@@ -43,7 +43,7 @@ export default function Dropdown() {
             <MenuItem>
               <button
                 type="submit"
-                className="block w-full px-4 py-2 text-left text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900"
+                className="block w-full px-4 py-2 text-left text-sm text-gray-700 data-[focus]:bg-[#dddddd24] data-[focus]:text-gray-900"
               >
                 Sign out
               </button>
