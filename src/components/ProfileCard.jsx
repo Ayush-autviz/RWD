@@ -23,7 +23,7 @@ const ProfileCard = () => {
       <Dropdown/>
       </div>
       <div className="relative">
-        <img className=" w-[82px] h-[82px] rounded-full md:w-[133px] md:h-[133px] " src="Rectangle 5.svg" />
+        <img className=" w-[82px] h-[82px] rounded-full md:w-[133px] md:h-[133px] " src="donor-unsplash.jpg" />
         <img className="absolute w-[22px] h-[22px] md:w-[45px] md:h-[45px] right-[-3px] bottom-[3px]  md:bottom-0" src="check.png" />
       </div>
       <div className="cursor-pointer hidden md:block text-[#4db510] mt-[17px] font-poppins text-[16px] font-semibold ">
