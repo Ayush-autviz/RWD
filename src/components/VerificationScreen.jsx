@@ -1,7 +1,17 @@
 import Lottie from "lottie-react";
 import signup from '../assets/signup.json'
+import { useLocation, useNavigate } from "react-router-dom";
 
 export default function VerificationScreen() {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const handleNext = ()=>{
+    if(location?.state?.tab==='donor'){
+         navigate('/categoryNP');
+    }else{
+      navigate('/categoryDonor');
+    }
+  }
   return (<>
 <section className="bg-[#FBFBFB] min-h-screen flex items-center justify-center">
   {/* login container */}
@@ -15,7 +25,7 @@ export default function VerificationScreen() {
       <form action="" className="flex flex-col gap-4 mt-4">
         <div className="relative">
           <input
-            className="p-2 rounded-xl border w-full"
+            className="p-2 rounded-xl border w-full bg-white"
            
             name="code"
              type="number"
@@ -29,7 +39,7 @@ export default function VerificationScreen() {
       <p className="text-xs  text-secondary">
        Didn't receive it? <span className="font-bold underline cursor-pointer hover:scale-105">Resend</span>
       </p>
-        <button className="py-2 px-5 bg-[#464645]  text-white border rounded-xl hover:scale-110 duration-300">
+        <button onClick={handleNext} className="py-2 px-5 bg-[#464645]  text-white border rounded-xl hover:scale-110 duration-300">
           Next
         </button>
       </div>

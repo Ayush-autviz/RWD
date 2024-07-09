@@ -41,14 +41,14 @@ export default function LoginComponentNP() {
       </p> */}
             <form action="" className="flex flex-col gap-4">
               <input
-                className="p-2 mt-4 rounded-xl border"
+                className="p-2 mt-4 rounded-xl border bg-white"
                 type="email"
                 name="email"
                 placeholder="Email"
               />
               <div className="relative">
                 <input
-                  className="p-2 rounded-xl border w-full"
+                  className="p-2 rounded-xl border w-full bg-white"
                   type="password"
                   name="password"
                   placeholder="Password"
@@ -67,24 +67,31 @@ export default function LoginComponentNP() {
             </form>
            
             <div className="mt-3 text-xs flex justify-center items-center text-center text-secondary">
-              <p>Don't have an account? <Link  className="px-1" to="/signup">Register</Link></p>
+              <p>Don't have an account?         <Link 
+          className="px-1" 
+          to="/signup"
+          state={{ tab: 'npo' }}
+        >
+          Sign up
+        </Link>
+</p>
            
             </div>
-            <p
+            {/* <p
               onClick={() => {
                 navigate("/login");
               }}
               className="p-3  rounded-2xl mt-4 bg-red-200 text-xs flex justify-center items-center text-secondary hover:scale-105 duration-300"
             >
               Or go to Donor login
-            </p>
+            </p> */}
           </div>
           {/* image */}
           <div className="md:block hidden bg-[#f5f4f4]  p-14 rounded-2xl h-full ">
             <div className="flex flex-col gap-24 items-center justify-center h-full ">
               <div className="flex flex-row gap-5 items-center justify-center">
-                <img src="logo.svg" />
-                <div className="text-[49px]">RWD</div>
+              <img src="crwd.png" className="w-[150px]" />
+                {/* <div className="text-[49px]">RWD</div> */}
               </div>
               <Lottie
                 className="w-[100%] h-[233px] "

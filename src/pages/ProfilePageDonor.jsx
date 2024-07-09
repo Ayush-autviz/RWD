@@ -7,7 +7,7 @@ import CentreCard from "../components/CentreCard";
 import Footer from "../components/Footer";
 import TabsDonor from "../components/TabsDonor";
 
-const ProfilePage = () => {
+const ProfilePageDonor = () => {
   return (
     <div className="flex flex-col md:flex-row overflow-x-hidden ">
       <div className="fixed top-0 left-0 h-full hidden md:block ">
@@ -160,4 +160,4 @@ const ProfilePage = () => {
   );
 };
 
-export default ProfilePage;
+export default ProfilePageDonor;

@@ -8,6 +8,10 @@ import LoginNP from './pages/LoginNP'
 import SignUpNP from './pages/SignUpNP'
 import VerificationScreen from './components/VerificationScreen'
 import ProtectedRoute from './components/ProtectedRoute'
+import CategoryNP from './pages/CategoryNP'
+import CategoryDonor from './pages/CategoryDonor'
+import ProfilePageDonor from './pages/ProfilePageDonor'
+import Search from './pages/Search'
 
 const App = () => {
   return (
@@ -17,9 +21,13 @@ const App = () => {
       <Route path='/login' element={<Login />} />
       <Route path='/loginNP' element={<LoginNP />} />
       <Route path='/profile' element={<ProtectedRoute element={<ProfilePage />} />} />
-      <Route path='/signup' element={<SignUp />} />
-      <Route path='/signupNP' element={<SignUpNP />} />
+      <Route path='/profileDonor' element={<ProtectedRoute element={<ProfilePageDonor />} />} />
+      <Route path='/signup' element={<SignUp/>} />
+      <Route path='/signupNP' element={<SignUpNP/>} />
+      <Route path='/categoryNP' element={<CategoryNP/>} />
+      <Route path='/categoryDonor' element={<CategoryDonor/>} />
       <Route path='/verification' element={<ProtectedRoute element={<VerificationScreen />} />} />
+      <Route path='/search' element={<ProtectedRoute element={<Search />} />} />
     </Routes>
 
   </div>

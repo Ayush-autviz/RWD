@@ -43,20 +43,22 @@ export default function LoginComponent() {
       </p> */}
             <form action="" className="flex flex-col gap-4">
               <input
-                className="p-2 mt-4 rounded-xl border"
+                className="p-2 mt-4 rounded-xl border bg-white"
                 type="email"
                 name="email"
                 placeholder="Email"
               />
               <div className="relative">
                 <input
-                  className="p-2 rounded-xl border w-full"
+                  className="p-2 rounded-xl border w-full bg-white"
                   type="password"
                   name="password"
                   placeholder="Password"
                 />
-               
-                <a className="text-xs text-right block py-1" href="#">Forgot your password?</a>
+
+                <a className="text-xs text-right block py-1" href="#">
+                  Forgot your password?
+                </a>
               </div>
               {/* <Select
             className="p-2 mt-8 rounded-xl border"
@@ -123,27 +125,42 @@ export default function LoginComponent() {
               </svg>
               Login with Google
             </button>
-            <div className="mt-0 text-xs border-[#002D74] pt-4 text-secondary">
-              
-            </div>
+            <button className="bg-white border py-2 w-full rounded-xl mt-3 flex justify-center items-center text-sm hover:scale-105 duration-300 text-[#002D74]">
+              <div className="w-7 h-7 mr-4">
+              <svg
+                data-tag="IconBrandApple"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <path d="M16.161 2c.13 1.172-.343 2.348-1.043 3.194-.7.844-1.85 1.502-2.975 1.415-.155-1.148.414-2.345 1.063-3.093.725-.845 1.946-1.476 2.955-1.516m3.641 6.826c-.183.112-2.181 1.328-2.159 3.8.027 2.986 2.594 4.006 2.69 4.045h.003l-.003.013c-.048.154-.453 1.472-1.385 2.832-.837 1.218-1.704 2.432-3.071 2.458-.657.012-1.096-.178-1.552-.375-.478-.206-.975-.42-1.76-.42-.822 0-1.342.22-1.843.433-.434.184-.854.363-1.444.386-1.32.05-2.324-1.317-3.168-2.53C4.388 16.983 3.07 12.45 4.84 9.39c.877-1.52 2.446-2.482 4.15-2.507.735-.014 1.446.267 2.07.513.475.188.898.356 1.24.356.308 0 .72-.162 1.201-.351.758-.298 1.685-.662 2.64-.566.655.028 2.49.264 3.67 1.984z"></path>
+              </svg>
+              </div>
+              Login with Apple
+            </button>
+            <div className="mt-0 text-xs border-[#002D74] pt-4 text-secondary"></div>
             <div className=" text-xs flex justify-center items-center text-secondary">
-              <p>Don't have an account?<Link  className="px-1" to="/signup">Register</Link></p>
+              <p>
+                Don't have an account?
+                <Link className="px-1" state={{ tab: "donor" }} to="/signup">
+                  Sign up
+                </Link>
+              </p>
             </div>
-            <p
+            {/* <p
               onClick={() => {
                 navigate("/loginNP");
               }}
               className="p-3  rounded-xl mt-4 bg-red-200 text-xs flex justify-center items-center text-secondary hover:scale-105 duration-300"
             >
               Or go to NP login
-            </p>
+            </p> */}
           </div>
           {/* image */}
           <div className="md:block hidden bg-[#f5f4f4] p-14 rounded-xl h-full ">
             <div className="flex flex-col gap-24 items-center justify-center h-full ">
               <div className="flex flex-row gap-5 items-center justify-center">
-                <img src="logo.svg" />
-                <div className="text-[49px]">RWD</div>
+                <img src="crwd.png" className="w-[150px]" />
+                {/* <div className="text-[49px]">RWD</div> */}
               </div>
               <Lottie
                 className="w-[200px] h-[233px] "
