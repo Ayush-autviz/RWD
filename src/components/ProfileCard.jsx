@@ -6,7 +6,7 @@ import Dropdown from "./Dropdown";
 const ProfileCard = () => {
   const [clicked,setClicked] = useState(false);
   return (
-    <div className="min-w-[25%] "> 
+    <div className="min-w-[25%] bg-[#FBFBFB] "> 
     <div className="bg-[#FBFBFB] flex flex-row items-center justify-between p-5 md:hidden">
 <div>
 </div>

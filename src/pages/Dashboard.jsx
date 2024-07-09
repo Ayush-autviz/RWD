@@ -9,7 +9,7 @@ import Footer from "../components/Footer";
 
 const Dashboard = () => {
   return (
-    <div className="flex flex-col md:flex-row">
+    <div className="flex flex-col md:flex-row bg-white">
       <div className="fixed top-0 left-0 h-full hidden md:block">
         <SideBar />
       </div>
