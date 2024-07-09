@@ -15,18 +15,18 @@ export default function VerificationScreen() {
   return (<>
 <section className="bg-[#FBFBFB] min-h-screen flex items-center justify-center">
   {/* login container */}
-  <div className="bg-[#FBFBFB] flex rounded-2xl shadow-custom-1  p-5 items-center">
+  <div className="my-5  bg-white rounded-2xl shadow-lg w-[100%] md:w-[500px]  md:p-8 p-2  items-center h-fit">
     {/* form */}
-    <div className="md:w-3/2 px-8 md:px-16">
-      <h2 className="font-bold text-2xl text-secondary">Verify your email</h2>
-      <p className="text-xs mt-4 text-secondary">
+    <div className="">
+      <h2 className="font-bold text-2xl text-secondary text-center pb-2">Verify your email</h2>
+      <p className="text-xs  text-secondary text-center font-poppins  pb-4">
         Enter the verification code sent on your email
       </p>
-      <form action="" className="flex flex-col gap-4 mt-4">
+      <form action="" className="flex flex-col gap-4">
         <div className="relative">
           <input
-            className="p-2 rounded-xl border w-full bg-white"
-           
+            className="p-2 py-4 rounded-xl border w-full text-sm  bg-white"
+
             name="code"
              type="number"
             placeholder="Verification code"
@@ -35,13 +35,17 @@ export default function VerificationScreen() {
         </div>
 
       </form>
-      <div className="mt-3 text-xs flex justify-between items-center text-secondary">
+      <div className="mt-3 text-xs flex flex-col gap-3 justify-between items-center text-secondary">
       <p className="text-xs  text-secondary">
        Didn't receive it? <span className="font-bold underline cursor-pointer hover:scale-105">Resend</span>
       </p>
-        <button onClick={handleNext} className="py-2 px-5 bg-[#464645]  text-white border rounded-xl hover:scale-110 duration-300">
-          Next
-        </button>
+      <button
+                onClick={handleNext}
+                className="bg-[#464645]  rounded-xl text-white py-4 w-full  hover:scale-105 duration-300"
+              >
+               Next
+              </button>
+
       </div>
     </div>
   </div>
@@ -49,3 +53,4 @@ export default function VerificationScreen() {
     </>
   );
 }
+ 

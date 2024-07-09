@@ -30,25 +30,25 @@ export default function LoginComponentNP() {
   };
   return (
     <>
-      <section className="bg-gray-50 min-h-screen flex bg-cover bg-center  items-center justify-center">
+      <section className="bg-gray-50 md:w-fit md:mx-auto mx-4 ">
         {/* login container */}
-        <div className="bg-[#FBFBFB] flex rounded-2xl shadow-custom-1 w-[750px] p-5 items-center">
+        <div className=" my-5 flex flex-row md:flex-row  bg-white rounded-2xl shadow-lg w-[100%] md:w-[750px]  md:p-8 p-2  items-center h-fit">
           {/* form */}
-          <div className="w-[60%] px-8 md:pr-12 md:px-8">
-            <h2 className="font-bold text-2xl text-secondary">Login</h2>
-            {/* <p className="text-xs mt-4 text-secondary">
-        If you are already a member, easily log in
-      </p> */}
+          <div className="w-[100%]  md:w-[60%] p-2 md:pr-8 ">
+          <h2 className="font-bold text-2xl text-secondary text-center pb-2">Login</h2>
+             <p className="text-xs  text-secondary text-center font-poppins  pb-4">
+             Gain loyal supporters who are passionate.
+      </p> 
             <form action="" className="flex flex-col gap-4">
               <input
-                className="p-2 mt-4 rounded-xl border bg-white"
+                className="p-2 mt-4  py-4 rounded-xl border bg-white"
                 type="email"
                 name="email"
                 placeholder="Email"
               />
               <div className="relative">
                 <input
-                  className="p-2 rounded-xl border w-full bg-white"
+                  className="p-2 py-4 rounded-xl border w-full bg-white"
                   type="password"
                   name="password"
                   placeholder="Password"
@@ -60,7 +60,7 @@ export default function LoginComponentNP() {
 
               <button
                 onClick={handleLogin}
-                className="bg-[#464645]  rounded-xl text-white py-2 hover:scale-105 duration-300"
+                className="bg-[#464645] rounded-xl under text-white py-3 hover:scale-105 duration-300"
               >
                 Login
               </button>
@@ -68,7 +68,7 @@ export default function LoginComponentNP() {
            
             <div className="mt-3 text-xs flex justify-center items-center text-center text-secondary">
               <p>Don't have an account?         <Link 
-          className="px-1" 
+          className="px-1 underline" 
           to="/signup"
           state={{ tab: 'npo' }}
         >

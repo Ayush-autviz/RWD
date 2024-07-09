@@ -36,29 +36,29 @@ export default function CategoryDonor() {
   const [animal, setAnimal] = useState(null);
   return (
     <>
-      <section className="bg-[#FBFBFB]  min-h-screen flex items-center justify-center">
+      <section className="bg-[#FBFBFB] min-h-screen flex items-center justify-center">
         {/* login container */}
-        <div className="bg-[#FBFBFB] flex rounded-2xl shadow-custom-1  p-5 items-center">
+        <div className="my-5  bg-white rounded-2xl shadow-lg w-[100%] md:w-[500px]  md:p-8 p-2  items-center h-fit">
           {/* form */}
-          <div className="md:w-3/2 px-8  md:px-16">
-            <h2 className="font-bold text-2xl text-secondary">
+          <div className="">
+            <h2 className="font-bold text-2xl text-secondary text-center pb-2">
               Choose categories you care about
             </h2>
-            <p className="text-xs mt-4 text-secondary">
+            <p className="text-xs  text-secondary text-center font-poppins  pb-4">
               Select all of the categories that align with your philanthropic
               goals
             </p>
             <form action="" className="flex flex-col gap-4 mt-4">
               <div className="relative">
                 <Select
-                  className="p-2 mt-8 rounded-xl border"
+                  className="p-2 py-4 rounded-xl border w-full text-sm  bg-white"
                   value={animal}
                   onChange={handleChange}
                   options={options}
                   isMultiple={true}
                   classNames={{
                     menuButton: ({ isDisabled }) =>
-                      `flex text-sm text-gray-500 border   rounded-xl   focus:outline-none ${
+                      `flex text-sm text-gray-500 border  py-1.5 rounded-xl   focus:outline-none ${
                         isDisabled
                           ? "bg-gray-200"
                           : "bg-white  focus:outline-offset-0 focus:outline-black"
@@ -78,7 +78,7 @@ export default function CategoryDonor() {
             <div className="mt-3 text-xs flex justify-between items-center text-secondary">
               <button
                 onClick={handleContinue}
-                className="py-2 px-5 bg-[#464645]  text-white border rounded-xl hover:scale-110 duration-300"
+                className="bg-[#464645]  rounded-xl text-white py-4 w-full  hover:scale-105 duration-300"
               >
                 Continue
               </button>
@@ -89,3 +89,4 @@ export default function CategoryDonor() {
     </>
   );
 }
+ 
