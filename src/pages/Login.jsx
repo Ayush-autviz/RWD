@@ -20,7 +20,7 @@ const Login = () => {
   );
 
   return (
-    <div className="bg-gray-50   h-screen flex flex-col bg-cover bg-center justify-center">
+    <div className="bg-gray-50  flex flex-col bg-cover bg-center justify-center">
       <div className="flex justify-center  items-center mt-6 ">
         <nav
           className="flex  bg-white border-[0.5px] rounded-full p-2 "

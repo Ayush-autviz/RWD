@@ -1,6 +1,6 @@
 import Lottie from "lottie-react";
 import login from "../assets/login.json";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Select from "react-tailwindcss-select";
 import { Link, useNavigate } from "react-router-dom";
  
@@ -29,6 +29,8 @@ export default function LoginComponent() {
     localStorage.setItem("isAuthenticated", "donar");
     navigate("/");
   };
+
+  const lottieRef = useRef();
  
   return (
     <>
@@ -169,9 +171,10 @@ export default function LoginComponent() {
                 {/* <div className="text-[49px]">RWD</div> */}
               </div>
               <Lottie
+                lottieRef={lottieRef}
                 className="w-[100%] h-[233px]  hidden md:block"
                 animationData={login}
-                speed={0}
+                play={false}
                 
               />
             </div>
