@@ -28,10 +28,32 @@ const Settings = () => {
       {name : 'Privacy Policy',id:'policy'}
     ]
 
+    const handleChange = (event) => {
+      const selectedTab = tabs.find(tab => tab.name === event.target.value);
+      setSelectedTab(selectedTab.id);
+    };
+
     
   return (
-    <div className='mb-9 mx-auto'>
-        <nav className="flex w-fit bg-white border-[0.5px] mx-auto rounded-full p-2 " aria-label="Tabs">
+    <div className=' md:mb-9  mx-auto'>
+              <div className="md:hidden">
+        <label htmlFor="tabs" className="sr-only">
+          Select a tab
+        </label>
+        {/* Use an "onChange" listener to redirect the user to the selected tab URL. */}
+        <select
+          id="tabs"
+          name="tabs"
+          className="block w-full focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+          defaultValue={'Change Password'}
+          onChange={handleChange}
+        >
+          {tabs.map((tab) => (
+            <option key={tab.name}>{tab.name}</option>
+          ))}
+      </select>
+      </div>
+        <nav className="flex w-fit hidden md:block bg-white border-[0.5px] mx-auto rounded-full p-2 " aria-label="Tabs">
           {tabs.map((tab) => (
             <a
               key={tab.id}
