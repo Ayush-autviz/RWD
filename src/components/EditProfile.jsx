@@ -2,7 +2,7 @@ import React from "react";
 
 const EditProfile = () => {
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className="flex flex-col items-center bg-white justify-center">
       <div className="flex items-center flex-col justify-center gap-2    w-fit">
         <img
           className=" w-[82px] h-[82px] rounded-full  "

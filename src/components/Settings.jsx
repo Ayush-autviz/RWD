@@ -32,7 +32,7 @@ const Settings = () => {
   };
 
   return (
-    <div className=" md:mb-9  mx-auto">
+    <div className=" md:mb-9 bg-white  mx-auto">
       <div className="md:hidden custom-select">
         <label htmlFor="tabs" className="sr-only">
           Select a tab
