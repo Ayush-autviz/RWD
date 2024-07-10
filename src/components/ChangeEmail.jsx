@@ -19,7 +19,7 @@ const ChangeEmail = () => {
               
               className="bg-[#464645] mt-4 rounded-xl text-white py-2 w-full  hover:scale-105 duration-300"
             >
-              Update
+              Updating
             </button>
     </div>
   )
