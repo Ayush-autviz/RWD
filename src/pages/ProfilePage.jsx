@@ -107,8 +107,8 @@ const ProfilePage = () => {
           ))}
         </nav>
       </div>
-          <div class="md:ml-[83px] my-7">
-           <div className="p-5  mx-5     rounded-[40px] shadow-custom-1">
+          <div class="md:ml-[83px]   my-7">
+           <div className="p-5  mx-5    mb-20 md:mb-0 rounded-[40px] shadow-custom-1">
            {selectedTab==='setting'?(
             <Settings/>
 ):(
