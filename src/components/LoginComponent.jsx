@@ -32,9 +32,9 @@ export default function LoginComponent() {
  
   return (
     <>
-      <section className="bg-gray-50 md:w-fit md:mx-auto mx-4">
+      <section className="bg-gray-50 md:w-fit  md:mx-auto mx-4">
         {/* login container */}
-        <div className="my-5 flex flex-row md:flex-row  bg-white rounded-2xl shadow-lg w-[100%] md:w-[750px]  md:p-8 p-2  items-center h-fit">
+        <div className="my-5 flex flex-col-reverse md:flex-row  bg-white rounded-2xl shadow-lg w-[100%] md:w-[750px]  md:p-8 p-2  items-center h-fit">
           {/* form */}
           <div className="w-[100%]  md:w-[60%] p-2 md:pr-8">
             <h2 className="font-bold text-2xl text-secondary text-center pb-2">Login</h2>
@@ -162,16 +162,17 @@ export default function LoginComponent() {
             </p> */}
           </div>
           {/* image */}
-          <div className="md:block hidden bg-[#f5f4f4]  p-14 rounded-2xl h-full ">
-            <div className="flex flex-col gap-24 items-center justify-center h-full ">
+          <div className=" md:bg-[#f5f4f4] pt-5 pb-2  md:p-14 rounded-2xl h-full ">
+            <div className="flex flex-col gap-24 items-center justify-center  h-full ">
               <div className="flex flex-row gap-5 items-center justify-center">
               <img src="crwd.png" className="w-[150px]" />
                 {/* <div className="text-[49px]">RWD</div> */}
               </div>
               <Lottie
-                className="w-[100%] h-[233px] "
+                className="w-[100%] h-[233px]  hidden md:block"
                 animationData={login}
-                loop={true}
+                speed={0}
+                
               />
             </div>
             {/* <div className="bg-slate-200 w-[380px] h-screen flex">

@@ -2,13 +2,13 @@ import React from 'react'
 
 const EditProfile = () => {
   return (
-    <div>
-            <div className="flex items-center   relative w-fit">
+    <div className='flex flex-col items-center justify-center'>
+            <div className="flex items-center flex-col justify-center gap-2    w-fit">
               <img
                 className=" w-[82px] h-[82px] rounded-full  "
                 src="Rectangle 5.svg"
               />
-              <div className='underline ml-8 cursor-pointer  '>
+              <div className='underline  cursor-pointer  '>
                Edit image
              </div>
             </div>
@@ -38,7 +38,7 @@ const EditProfile = () => {
 
         </div>
         <div className="relative my-4">
-        <div className='mb-2'>Your dontaion will provide</div>
+        <div className='mb-2'>Our mission is</div>
           <textarea
             className="p-2 rounded-xl border w-full"
             type="text"
@@ -84,6 +84,12 @@ const EditProfile = () => {
           />
 
         </div>
+        <button
+              
+              className="bg-[#464645]  rounded-xl text-white py-2 w-full my-4  hover:scale-105 duration-300"
+            >
+              Save
+            </button>
         </div> 
     </div>
   )

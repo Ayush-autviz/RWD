@@ -124,13 +124,16 @@ const Search = () => {
 <div className="mt-4">
   Causes:
 </div>
-<div className="rounded-[10px] shadow-custom-1 w-fit mt-4 p-4">
-<div className="  flex items-center  justify-start    rounded-t-[10px]">My Donation Provides</div>
-<div className="font-semibold flex items-center text-[20px] justify-start mt-1   rounded-t-[10px]">free meals foe undeserved familes in atlanta</div>
-    <div className="flex-row flex justify-center gap-2 mt-2 items-center ">
-        <img src='Rectangle 5.svg' className="w-12 h-12 rounded-full" />
-        <div className="font-semibold">Habitat for Humanity provide</div>
-    </div>
+<div className="rounded-[10px] border border-solid border-[#DFDFDF]  shadow-custom-1 w-fit mt-4  ">
+<div className="flex-col flex justify-center gap-2   items-center   ">
+        <img src='Rectangle 5.svg' className="w-12 h-12 mt-[-24px]  border-solid border-[#DFDFDF] border rounded-full" />
+        <div className="font-semibold text-[#4db510] underline underline-offset-[10px]">Groccery Spot</div>
+</div>
+<div className="my-5">
+<div className="  flex items-center font-semibold justify-center m-2 mx-4   rounded-t-[10px]">My Donation Provides</div>
+<div className=" my-4  mx-4 flex items-center text-[15px] justify-center mt-1   rounded-t-[10px]">Free meals for undeserved familes in atlanta</div>
+</div>
+<div className="w-fit mx-auto bg-[#4db510] hover:scale-105 text-white px-4  py-1 rounded-t-[10px] ">Make a donate</div>
 
 </div>
 

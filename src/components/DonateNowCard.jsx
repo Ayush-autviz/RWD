@@ -6,7 +6,7 @@ import maingif from '../assets/maingif.json'
 const DonateNowCard = () => {
   return (
     <div className='flex justify-between items-center flex-col bg-white  lg:flex-row shadow-custom-1 px-[30px] py-[30px]  md:py-[50px] rounded-[10px] relative overflow-hidden '>
-    <img src='Ellipse2.svg' className='absolute bottom-0 left-0 z-[-1] '/>
+    <img src='Ellipse2.svg' className='absolute bottom-0 left-0 z-[5] '/>
     <div className='lg:order-1 order-2'>
      <div className='text-secondary center lg:text-left text-center font-poppins md:text-[25px] md:font-bold font-normal text-[16px] font-semibold leading-[30px]'>
      Your donation will provide
@@ -21,10 +21,10 @@ const DonateNowCard = () => {
          </div>
      </div>
     </div>
-    <div className='mx-auto pt-3 xl:mr-0 md:mt-0 hidden lg:order-1 order-2 mb-[-50px] md:block lg:relative z-[-10]'>
+    <div className='mx-auto pt-3 xl:mr-0 md:mt-0 hidden lg:order-1 order-2 mb-[-50px] md:block lg:relative z-[4]'>
      {/* <img src='char.svg'/> */}
 
-     <Lottie className='w-[220px] h-[233px] ml-4 mt-[-40px] bg-red ' animationData={maingif} loop={true} />
+     <Lottie className='w-[220px] h-[233px]  ml-4 mt-[-40px] bg-red ' animationData={maingif} loop={true} />
 
     </div>
     {/* <div className='flex w-full center xl:left rounded-[5px] lg:hidden cursor-pointer mt-5 order-3  bg-[#464645] hover:bg-[#2a2a29] duration-200 px-[20px] py-[13px]  flex-row gap-2 items-center justify-center'>

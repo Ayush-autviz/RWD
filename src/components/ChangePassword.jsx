@@ -2,7 +2,7 @@ import React from 'react'
 
 const ChangePassword = () => {
   return (
-               <div className='md:w-1/2'>
+               <div className='md:w-1/2 mx-auto mt-7'>
             <div className='w-full flex items-center justify-end'>
             <p className="text-xs    mb-2 text-secondary">
         Forget Password?
@@ -36,6 +36,12 @@ const ChangePassword = () => {
           />
 
         </div>
+        <button
+              
+              className="bg-[#464645] mt-4 rounded-xl text-white py-2 w-full  hover:scale-105 duration-300"
+            >
+              Update
+            </button>
         </div> 
   )
 }

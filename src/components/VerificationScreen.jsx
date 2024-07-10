@@ -13,9 +13,9 @@ export default function VerificationScreen() {
     }
   }
   return (<>
-<section className="bg-[#FBFBFB] min-h-screen flex items-center justify-center">
+<section className="bg-[#FBFBFB]  min-h-screen  flex items-center justify-center">
   {/* login container */}
-  <div className="my-5  bg-white rounded-2xl shadow-lg w-[100%] md:w-[500px]  md:p-8 p-2  items-center h-fit">
+  <div className="my-5  bg-white rounded-2xl mx-3 shadow-lg w-[100%] md:w-[500px]  md:p-8 p-2  items-center h-fit">
     {/* form */}
     <div className="">
       <h2 className="font-bold text-2xl text-secondary text-center pb-2">Verify your email</h2>
