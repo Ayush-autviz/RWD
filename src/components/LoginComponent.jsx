@@ -12,6 +12,7 @@ const options = [
  
 export default function LoginComponent() {
   const navigate = useNavigate();
+  const lottieRef = useRef();
   const [animal, setAnimal] = useState(null);
   const handleChange = (value) => {
     console.log("value:", value);
@@ -24,17 +25,18 @@ export default function LoginComponent() {
   //     navigate('/');
   //   }
   // },[])
- 
+  
   const handleLogin = () => {
     localStorage.setItem("isAuthenticated", "donar");
     navigate("/");
   };
 
-  const lottieRef = useRef();
+  
+  lottieRef?.current?.stop();
  
   return (
     <>
-      <section className="bg-gray-50 md:w-fit  md:mx-auto mx-4">
+      <section className="bg-gray-50 md:w-fit   md:mx-auto mx-4">
         {/* login container */}
         <div className="my-5 flex flex-col-reverse md:flex-row  bg-white rounded-2xl shadow-lg w-[100%] md:w-[750px]  md:p-8 p-2  items-center h-fit">
           {/* form */}

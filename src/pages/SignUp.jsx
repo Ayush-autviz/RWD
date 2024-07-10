@@ -19,7 +19,7 @@ const SignUp = () => {
     location?.state?.tab || "donor"
   );
   return (
-    <div className="bg-gray-50 py-50  flex flex-col bg-cover bg-center justify-center">
+    <div className="bg-gray-50  my-auto  flex flex-col bg-cover bg-center justify-center">
       <div className="flex justify-center  items-center mt-6 ">
         <nav
           className="flex  bg-white border-[0.5px] rounded-full p-2"
