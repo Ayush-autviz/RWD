@@ -232,12 +232,12 @@ const Search = () => {
         {causes.map((cause) => (
           <div
             key={cause.id}
-            className="rounded-[10px] hover:scale-105 border border-solid border-[#DFDFDF] shadow-custom-1 w-full mt-4"
+            className="rounded-[40px] hover:scale-105 border border-solid border-[#DFDFDF]  w-full mt-4"
           >
             <div className="flex-col flex justify-center gap-2 items-center">
               <img
                 src={cause.image}
-                className="w-12 h-12 mt-[-24px] border-solid border-[#DFDFDF] border rounded-full"
+                className="w-12 h-12 mt-[-24px] border-solid shadow-custom-1 border-[#DFDFDF] border rounded-full"
                 alt={cause.title}
               />
               <div className="font-semibold text-[#4db510] underline underline-offset-[10px]">
