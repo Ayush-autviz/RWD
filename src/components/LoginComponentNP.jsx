@@ -32,13 +32,15 @@ export default function LoginComponentNP() {
     <>
       <section className="bg-gray-50 md:w-fit md:mx-auto mx-4 ">
         {/* login container */}
-        <div className=" my-5 flex flex-col-reverse md:flex-row  bg-white rounded-2xl shadow-lg w-[100%] md:w-[750px]  md:p-8 p-2  items-center h-fit">
+        <div className=" my-5 flex flex-col-reverse  bg-white rounded-2xl shadow-lg w-[100%] md:w-[550px]  md:p-8 p-2  items-center h-fit">
           {/* form */}
-          <div className="w-[100%]  md:w-[60%] p-2 md:pr-8 ">
-          <h2 className="font-bold text-2xl text-secondary text-center pb-2">Login</h2>
-             <p className="text-xs  text-secondary text-center font-poppins  pb-4">
-             Gain loyal supporters who are passionate.
-      </p> 
+          <div className="w-[100%] p-2 ">
+            <h2 className="font-bold text-2xl text-secondary text-center pb-2">
+              Login
+            </h2>
+            <p className="text-xs  text-secondary text-center font-poppins  pb-4">
+              Gain loyal supporters who are passionate.
+            </p>
             <form action="" className="flex flex-col gap-4">
               <input
                 className="p-2 mt-4  py-4 rounded-xl border bg-white"
@@ -53,9 +55,10 @@ export default function LoginComponentNP() {
                   name="password"
                   placeholder="Password"
                 />
-                
-                <a className="text-xs text-right block py-1" href="#">Forgot your password?</a>
 
+                <a className="text-xs text-right block py-1" href="#">
+                  Forgot your password?
+                </a>
               </div>
 
               <button
@@ -65,17 +68,18 @@ export default function LoginComponentNP() {
                 Login
               </button>
             </form>
-           
+
             <div className="mt-3 text-xs flex justify-center items-center text-center text-secondary">
-              <p>Don't have an account?         <Link 
-          className="px-1 underline" 
-          to="/signup"
-          state={{ tab: 'npo' }}
-        >
-          Sign up
-        </Link>
-</p>
-           
+              <p>
+                Don't have an account?{" "}
+                <Link
+                  className="px-1 underline"
+                  to="/signup"
+                  state={{ tab: "npo" }}
+                >
+                  Sign up
+                </Link>
+              </p>
             </div>
             {/* <p
               onClick={() => {
@@ -87,21 +91,9 @@ export default function LoginComponentNP() {
             </p> */}
           </div>
           {/* image */}
-          <div className=" md:bg-[#f5f4f4] pt-5 pb-2  md:p-14 rounded-2xl h-full ">
-            <div className="flex flex-col gap-24 items-center justify-center  h-full ">
-              <div className="flex flex-row gap-5 items-center justify-center">
-              <img src="crwd.png" className="w-[150px]" />
-                {/* <div className="text-[49px]">RWD</div> */}
-              </div>
-              <Lottie
-                className="w-[100%] h-[233px]  hidden md:block"
-                animationData={login}
-                loop={true}
-              />
-            </div>
-            {/* <div className="bg-slate-200 w-[380px] h-screen flex">
- 
-</div> */}
+          <div className="flex flex-row pb-4 items-center justify-center">
+            <img src="crwd.png" className="w-[150px]" />
+            {/* <div className="text-[49px]">RWD</div> */}
           </div>
         </div>
       </section>
