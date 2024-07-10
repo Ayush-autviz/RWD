@@ -170,19 +170,19 @@ export default function LoginComponent() {
             </p> */}
           </div>
           {/* image */}
-          <div className=" md:bg-[#f5f4f4] pt-5 pb-2  md:p-14 rounded-2xl h-full ">
+          <div className=" md:bg-[#f5f4f4] pt-5 pb-2 h-auto md:p-14 rounded-2xl  ">
             <div className="flex flex-col gap-24 items-center justify-center  h-full ">
               <div className="flex flex-row gap-5 items-center justify-center">
               <img src="crwd.png" className="w-[150px]" />
                 {/* <div className="text-[49px]">RWD</div> */}
               </div>
-              <Lottie
+              {/* <Lottie
                 lottieRef={lottieRef}
                 className="w-[100%] h-[233px]  hidden md:block"
                 animationData={login}
                 
                 
-              />
+              /> */}
             </div>
             {/* <div className="bg-slate-200 w-[380px] h-screen flex">
  

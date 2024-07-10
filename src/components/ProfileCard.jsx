@@ -32,26 +32,26 @@ const ProfileCard = () => {
       <div className="h-[1px] w-full bg-[#DFDFDF] mt-5 hidden md:block" />
       <div className="flex flex-row justify-between md:flex-col md:gap-6 mt-4 w-full">
         <div className="text-center">
-          <div className="text-secondary font-poppins text-[16px] md:text-[14px] font-medium mb-2">
+          <div className="text-secondary font-poppins text-[16px] md:text-[12px] font-medium md:mb-2 mb-0">
             Donations
           </div>
-          <div className="text-secondary font-poppins text-[30px] md:text-[48px] font-semibold leading-[35px] md:leading-[40px]">
+          <div className="text-secondary font-poppins text-[25px] md:text-[48px] font-semibold leading-[35px] md:leading-[40px]">
             270
           </div>
         </div>
         <div className="text-center">
-          <div className="text-secondary font-poppins text-[16px] md:text-[14px] font-medium mb-2">
+          <div className="text-secondary font-poppins text-[16px] md:text-[12px] font-medium  md:mb-2 mb-0">
             Supporters
           </div>
-          <div className="text-secondary font-poppins text-[30px] md:text-[48px] font-semibold leading-[35px] md:leading-[40px]">
+          <div className="text-secondary font-poppins text-[25px] md:text-[48px] font-semibold leading-[35px] md:leading-[40px]">
             1K
           </div>
         </div>
         <div className="text-center">
-          <div className="text-secondary font-poppins text-[16px] md:text-[14px] font-medium mb-2">
+          <div className="text-secondary font-poppins text-[16px] md:text-[12px] font-medium  md:mb-2 mb-0">
             Collectives
           </div>
-          <div className="text-secondary font-poppins text-[30px] md:text-[48px] font-semibold leading-[35px] md:leading-[40px]">
+          <div className="text-secondary font-poppins text-[25px] md:text-[48px] font-semibold leading-[35px] md:leading-[40px]">
             37
           </div>
         </div>
@@ -62,10 +62,11 @@ const ProfileCard = () => {
       </div>
         <div className="text-white font-poppins text-[14px] text-center font-semibold">
           Support this cause
+        <span className="font-normal block"> For $5/month</span>
         </div>
       </div>
       <div className="text-secondary font-poppins text-[16px] font-medium mt-2">
-        For $5/month
+       
       </div>
       </>
       )}
