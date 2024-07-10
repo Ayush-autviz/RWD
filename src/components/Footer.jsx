@@ -1,15 +1,19 @@
 import { useState } from 'react';
+import { useTabContext } from '../context/TabProvider';
+import { useNavigate } from 'react-router-dom';
 
 const Footer = () => {
-  const [selectedTab, setSelectedTab] = useState('home');
+ // const [selectedTab, setSelectedTab] = useState('home');
+  const { selectedTab, setSelectedTab } = useTabContext();
+  const navigate = useNavigate()
 
   return (
     <div className="bg-white z-50 flex mx-5 mb-5 flex-row px-[11px] py-[9px] justify-between items-center border border-solid border-[#4db510] shadow-custom-1 rounded-[41px]">
-      <div
+      <div 
         className={`rounded-[54px] px-[24px] py-[8px] cursor-pointer ${
           selectedTab === 'home' ? 'bg-[#4db510] ' : ''
         }`}
-        onClick={() => setSelectedTab('home')}
+        onClick={() => {setSelectedTab('home'),navigate('/')}}
       >
         <img className={` ${selectedTab === 'home' ? 'filter-white' : 'image-brown'}`} src="home.svg" />
       </div>
@@ -25,7 +29,7 @@ const Footer = () => {
         className={`rounded-[54px] px-[24px] py-[8px] cursor-pointer ${
           selectedTab === 'user' ? 'bg-[#4db510] ' : ''
         }`}
-        onClick={() => setSelectedTab('user')}
+        onClick={() => {setSelectedTab('user'),navigate('/profile')}}
       >
         <img className={`${selectedTab === 'user' ? 'filter-white' : ''}`} src="lucide_user.svg" />
       </div>
