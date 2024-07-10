@@ -8,7 +8,7 @@ const Footer = () => {
   const navigate = useNavigate()
 
   return (
-    <div className="bg-white z-50 flex mx-5 mb-5 flex-row px-[11px] py-[8px] justify-between items-center border border-solid border-[#4db510] shadow-custom-1 rounded-[41px]">
+    <div className="bg-white z-[100] flex mx-5 mb-5 flex-row px-[11px] py-[8px] justify-between items-center border border-solid border-[#4db510] shadow-custom-1 rounded-[41px]">
       <div 
         className={`rounded-[54px] px-[24px] py-[7px] cursor-pointer ${
           selectedTab === 'home' ? 'bg-[#4db510] ' : ''

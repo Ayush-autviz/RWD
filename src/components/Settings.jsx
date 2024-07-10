@@ -3,6 +3,8 @@ import ChangePassword from "./ChangePassword";
 import ChangeUsername from "./ChangeUsername";
 import ChangeEmail from "./ChangeEmail";
 import PaymentMethod from "./PaymentMethod";
+import TermsAndCondition from "./TermsAndCondition";
+import PrivacyPolicy from "./PrivacyPolicy";
 
 const Settings = () => {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -74,6 +76,9 @@ const Settings = () => {
       {selectedTab === "password" && <ChangePassword />}
       {selectedTab === "email" && <ChangeEmail />}
       {selectedTab === "payment" && <PaymentMethod />}
+      {selectedTab === "terms" && <TermsAndCondition />}
+      {selectedTab === "policy" && <PrivacyPolicy />}
+
     </div>
   );
 };
