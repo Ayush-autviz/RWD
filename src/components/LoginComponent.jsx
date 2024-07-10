@@ -9,6 +9,11 @@ const options = [
   { value: "Butterfly", label: "🦋 Butterfly" },
   { value: "Honeybee", label: "🐝 Honeybee" },
 ];
+
+
+const interactivity = {
+  speed: 0
+}
  
 export default function LoginComponent() {
   const navigate = useNavigate();
@@ -31,8 +36,7 @@ export default function LoginComponent() {
     navigate("/");
   };
 
-  
-  lottieRef?.current?.stop();
+ 
  
   return (
     <>
@@ -176,7 +180,7 @@ export default function LoginComponent() {
                 lottieRef={lottieRef}
                 className="w-[100%] h-[233px]  hidden md:block"
                 animationData={login}
-                play={false}
+                
                 
               />
             </div>
