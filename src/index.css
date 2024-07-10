@@ -49,3 +49,7 @@ input::-webkit-inner-spin-button {
 input[type='number'] {
   -moz-appearance: textfield;
 }
+
+.custom-select option:hover {
+  background-color: #f1f5f9; /* Tailwind's bg-gray-100 */
+}

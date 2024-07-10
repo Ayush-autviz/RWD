@@ -9,7 +9,7 @@ const ChangeEmail = () => {
     xyz@gmail.com
   </p>
        <input
-         className="p-2 rounded-xl border w-full"
+         className="p-2   py-4 rounded-xl border w-full bg-white"
          type="email"
          name="email"
          placeholder="New email"
@@ -17,7 +17,7 @@ const ChangeEmail = () => {
      </div>
      <button
               
-              className="bg-[#464645] mt-4 rounded-xl text-white py-2 w-full  hover:scale-105 duration-300"
+              className="bg-[#464645] mt-4 rounded-xl text-white py-4 w-full  hover:scale-105 duration-300"
             >
               Update
             </button>

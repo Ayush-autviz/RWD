@@ -28,7 +28,7 @@ const PaymentMethod = () => {
     <div className='font-semibold text-[16px] my-1'>Add new card</div>
     <div className="relative ">
     <input
-        className="p-2 rounded-xl border w-full"
+        className="p-2   py-4 rounded-xl border w-full bg-white"
         type="text"
         name="cardNumber"
         placeholder="Card Number"
@@ -38,19 +38,19 @@ const PaymentMethod = () => {
      </div>
      <div className="relative flex flex-row gap-4 ">
        <input
-         className="p-2 rounded-xl border w-full"
+         className="p-2   py-4 rounded-xl border w-full bg-white"
          type="number"
          name="email"
          placeholder="MM"
        />
        <input
-         className="p-2 rounded-xl border w-full"
+         className="p-2   py-4 rounded-xl border w-full bg-white"
          type="number"
          name="email"
          placeholder="YY"
        />
         <input
-         className="p-2 rounded-xl border w-full"
+         className="p-2   py-4 rounded-xl border w-full bg-white"
          type="email"
          name="email"
          placeholder="CVV"
@@ -58,7 +58,7 @@ const PaymentMethod = () => {
      </div>
      <div className="relative">
        <input
-         className="p-2 rounded-xl border w-full"
+         className="p-2   py-4 rounded-xl border w-full bg-white"
          type="text"
          name="First Name"
          placeholder="First Name"
@@ -66,7 +66,7 @@ const PaymentMethod = () => {
      </div>
      <div className="relative">
        <input
-         className="p-2 rounded-xl border w-full"
+         className="p-2   py-4 rounded-xl border w-full bg-white"
          type="text"
          name="Last Name"
          placeholder="Last Name"
@@ -74,7 +74,7 @@ const PaymentMethod = () => {
      </div>
      <button
               
-                className="bg-[#464645]  rounded-xl text-white py-2 w-full  hover:scale-105 duration-300"
+                className="bg-[#464645]  rounded-xl text-white py-4 w-full  hover:scale-105 duration-300"
               >
                 Add
               </button>

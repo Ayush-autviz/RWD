@@ -11,7 +11,7 @@ const ChangePassword = () => {
           <div className="relative">
            
           <input
-            className="p-2 rounded-xl border w-full"
+            className="p-2   py-4 rounded-xl border w-full bg-white"
             type="password"
             name="password"
             placeholder="Current Password"
@@ -20,7 +20,7 @@ const ChangePassword = () => {
 
         <div className="relative my-4">
           <input
-            className="p-2 rounded-xl border w-full"
+            className="p-2   py-4 rounded-xl border w-full bg-white"
             type="password"
             name="password"
             placeholder="New Password"
@@ -29,7 +29,7 @@ const ChangePassword = () => {
         </div>
         <div className="relative">
           <input
-            className="p-2 rounded-xl border w-full"
+            className="p-2   py-4 rounded-xl border w-full bg-white"
             type="password"
             name="password"
             placeholder="Confirm Password"
@@ -38,7 +38,7 @@ const ChangePassword = () => {
         </div>
         <button
               
-              className="bg-[#464645] mt-4 rounded-xl text-white py-2 w-full  hover:scale-105 duration-300"
+              className="bg-[#464645] mt-4 rounded-xl text-white py-4 w-full  hover:scale-105 duration-300"
             >
               Update
             </button>
