@@ -204,7 +204,7 @@ const Search = () => {
         <div className="p-5 bg-white  mx-5  md:mb-0 rounded-[40px] shadow-custom-1">
 <div className="text-[24px]  font-bold mx-auto w-fit my-4">Categories</div>
       <div className="flex mx-8 md:mx-20  mt-5">
-        <div className="gap-3 flex flex-row items-center justify-center flex-wrap mx-auto">
+        <div className="gap-5 flex flex-row items-center justify-center flex-wrap mx-auto">
           {displayedCategories.map((item, index) => (
             <div
               key={index}
@@ -243,11 +243,11 @@ const Search = () => {
 
 
 
-      <div className="p-5  mx-5  mb-20 md:mb-7 rounded-[40px] bg-white border mt-8">
+      <div className="md:p-5 p-1 mx-4 mb-20 md:mb-7 rounded-[40px] bg-white border mt-8">
       <div className="text-[24px] mb-7   font-bold mx-auto w-fit my-4">
         Causes
       </div>
-      <div className="grid grid-cols-1 mx-5 sm:grid-cols-2  md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 mx-5 sm:grid-cols-2  md:grid-cols-3 gap-y-7 md:gap-x-4">
         {causes.map((cause) => (
           <div
             key={cause.id}

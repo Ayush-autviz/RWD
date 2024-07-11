@@ -46,21 +46,21 @@ const ProfilePage = () => {
             </div>
 
 
-            <div className="flex flex-col gap-5 ">
+            <div className="flex flex-col gap-2 ">
               {/* <div className="bg-[#e9e9e9] md:ml-[83px] w-full flex  flex-row items-center justify-between  "> */}
 
-              <div className="font-poppins px-10 mx-auto  md:mx-0  mt-5 md:mt-0  text-[#4db510] text-[16px] font-semibold">
+              <div className="font-poppins px-10 mx-auto  md:mx-0  mt-5 md:mt-0  text-[#4db510] text-[25px] font-semibold">
                 Grocery Spot
               </div>
 
               {/* </div> */}
 
-              <div className="flex flex-row  justify-between md:px-10 gap-5  mb-6 md:gap-10   w-full">
+              <div className="flex flex-row justify-around  md:px-10 gap-4  mb-6  w-full">
                 <div className="text-center item-center flex flex-col md:flex-row-reverse md:items-end gap-2 justify-center">
                   <div className="text-secondary  font-poppins text-[16px] md:text-[14px] font-medium mb-1">
                     Donations
                   </div>
-                  <div className="text-secondary s font-poppins text-[29px]  font-semibold leading-[35px] md:leading-[40px]">
+                  <div className="text-secondary s font-poppins text-[25px]  font-semibold leading-[35px] md:leading-[40px]">
                     270
                   </div>
                 </div>
@@ -68,7 +68,7 @@ const ProfilePage = () => {
                   <div className="text-secondary  font-poppins text-[16px] md:text-[14px] font-medium mb-1">
                     Supporters
                   </div>
-                  <div className="text-secondary s font-poppins text-[29px]  font-semibold leading-[35px] md:leading-[40px]">
+                  <div className="text-secondary s font-poppins text-[25px]  font-semibold leading-[35px] md:leading-[40px]">
                     1K
                   </div>
                 </div>

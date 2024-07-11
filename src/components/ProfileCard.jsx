@@ -30,7 +30,7 @@ const ProfileCard = () => {
         Grocery Spot
       </div>
       <div className="h-[1px] w-full bg-[#DFDFDF] mt-5 hidden md:block" />
-      <div className="flex flex-row justify-between md:flex-col md:gap-6 mt-4 w-full">
+      <div className="flex flex-row justify-center md:flex-col md:gap-6 gap-4 mt-4 w-full">
         <div className="text-center">
           <div className="text-secondary font-poppins text-[16px] md:text-[12px] font-medium md:mb-2 mb-0">
             Donations

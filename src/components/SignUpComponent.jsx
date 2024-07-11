@@ -12,7 +12,7 @@ export default function SignUpComponent() {
     <>
       <section className="bg-gray-50 md:w-fit md:mx-auto mx-4">
         {/* login container */}
-        <div className="my-5 flex flex-col-reverse  bg-white rounded-2xl shadow-lg w-[100%] md:w-[550px]  md:p-8 p-2  items-center h-fit">
+        <div className="my-5 flex flex-col-reverse  bg-white rounded-2xl shadow-lg w-[100%] md:w-[550px]  md:p-8 p-4  items-center h-fit">
           {/* form */}
           <div className="w-[100%]  p-2">
             <h2 className="font-bold text-2xl text-secondary text-center pb-2">
@@ -54,7 +54,7 @@ export default function SignUpComponent() {
             <div className="mt-3 text-xs flex justify-center items-center text-center text-secondary">
               <p>
                 Already have an account?{" "}
-                <Link className="px-1 underline" to="/login">
+                <Link className="font-bold underline cursor-pointer hover:scale-105 px-1" to="/login">
                   Login
                 </Link>
               </p>
