@@ -15,7 +15,9 @@ const SideBar = () => {
       <Link onClick={()=>{setSelectedTab('home')}} to='/'>
       <img  className='cursor-pointer image-color' src="ri_home-3-line.svg" />
       </Link>
+      <Link onClick={()=>{setSelectedTab('search')}} to='/search'>
       <img  className='cursor-pointer image-color' src="mdi_search.svg" />
+      </Link>
       <Link onClick={()=>{setSelectedTab('user')}} to='/profile'>
       <img  className='cursor-pointer image-color' src="lucide_user.svg" />
       </Link>

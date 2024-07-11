@@ -19,7 +19,7 @@ const PrivacyPolicy = () => {
     <ul className="list-disc list-inside mb-4">
       <li>Google, as a third-party vendor, uses cookies to serve ads on Our Company.</li>
       <li>Google's use of the DART cookie enables it to serve ads to users based on their visit to Our Company and other sites on the Internet.</li>
-      <li>Users may opt out of the use of the DART cookie by visiting the Google ad and content network privacy policy at the following URL - <a href="https://policies.google.com/technologies/ads" className="text-blue-500 underline">https://policies.google.com/technologies/ads</a></li>
+      <li>Users may opt out of the use of the DART cookie by visiting the Google ad and content network privacy policy at the following URL - <a href="https://policies.google.com" className="text-blue-500 underline">https://policies.google.com</a></li>
     </ul>
     
     <h2 className="text-2xl font-semibold mt-6 mb-4">Our Advertising Partners</h2>

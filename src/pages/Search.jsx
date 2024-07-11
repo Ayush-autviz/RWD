@@ -158,18 +158,25 @@ const Search = () => {
       <div className="fixed top-0 left-0 h-full hidden md:block">
         <SideBar />
       </div>
-      <div className="md:ml-[90px] flex-1 w-full overflow-y-auto flex flex-col-reverse md:flex-row">
-        <CentreCard className="">
-          <div className="w-full">
-        <form action="/search">
+      
+      <div className="md:ml-[83px] flex-1 w-full overflow-y-auto flex flex-col">
+      <div className="flex-1  ml-0   rounded-b-[40px] border border-solid border-[#DFDFDF] bg-[#e9e9e9]
+  flex flex-col  items-center py-[20px] px-[20px] ">
+        <div className="flex w-full justify-center items-center">
+          <div className="text-[40px] text-center font-[800]">
+            Discover CRWD
+          </div>
+        </div>
+      <div className="w-full mb-[-45px]">
+          <form action="/search">
             <label
-                class="mx-auto mt-8 relative bg-white min-w-sm max-w-2xl flex flex-row md:flex-row items-center justify-center border py-1 px-1  gap-2  focus-within:border-gray-300 rounded-full"
+                class="mx-auto mt-8 relative bg-white min-w-sm max-w-2xl flex flex-row md:flex-row items-center justify-center shadow-custom-1 py-1 px-1  gap-2  focus-within:border-gray-300 rounded-full"
                 for="search-bar">
 
                 <input id="search-bar" placeholder="Search CRWD" name="q"
                     class="px-6 py-2 w-full rounded-full flex-1 outline-none bg-white" required=""/>
                 <button type="submit"
-                    class="w-auto md:w-auto px-6 py-3 bg-[#464645] hover:scale-105 text-white fill-white active:scale-95 duration-100 border will-change-transform overflow-hidden relative rounded-full transition-all">
+                    class="w-auto md:w-auto px-6 py-3 bg-gray-100 hover:scale-105  fill-white active:scale-95 duration-100 border will-change-transform overflow-hidden relative rounded-full transition-all">
                     <div class="flex items-center transition-all opacity-1">
                         <span class="text-sm font-semibold whitespace-nowrap truncate mx-auto">
                             Search
@@ -178,6 +185,13 @@ const Search = () => {
                 </button>
             </label>
         </form>
+        </div>
+
+        </div>
+        <div className="mt-10 rounded-[40px]">
+        <div className="">
+          <div className="w-full">
+
         {/* <div class="relative mb-5 ">
           <input class="p-2 rounded-[10px] border w-full" type="text" name="password" placeholder="Search"/>
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="gray" class="bi bi-eye absolute top-1/2 right-3 -translate-y-1/2" viewBox="0 0 16 16">
@@ -187,33 +201,37 @@ const Search = () => {
       clipRule="evenodd" />
           </svg>
         </div> */}
-<div className="text-[18px] font-semibold my-4">Categories:</div>
-      <div className="flex  mt-5">
-        <div className="gap-3 flex flex-row flex-wrap">
+        <div className="p-5 bg-white  mx-5  md:mb-0 rounded-[40px] shadow-custom-1">
+<div className="text-[24px]  font-bold mx-auto w-fit my-4">Categories</div>
+      <div className="flex mx-8 md:mx-20  mt-5">
+        <div className="gap-3 flex flex-row items-center justify-center flex-wrap">
           {displayedCategories.map((item, index) => (
             <div
               key={index}
-              className="p-3 border border-solid border-[#4db510] w-fit rounded-full hover:bg-green-50 gap-2 flex flex-row items-center justify-start"
+              className="p-3 cursor-pointer border-[1px] w-fit rounded-full hover:bg-gray-100 gap-2 flex flex-row items-center justify-start"
             >
               {/* <img src={item.path} className="w-[18px] h-[18px]" alt={item.name} /> */}
               <div className="text-[12px]  font-semibold">{item.name}</div>
             </div>
           ))}
-          {!showAll && (
+        </div>
+      </div> 
+      {!showAll && (
             <div
               onClick={handleLoadMore}
-              className="cursor-pointer p-3 w-fit rounded-full gap-2 flex flex-row items-center justify-start"
+              className="cursor-pointer p-3 mx-auto w-fit  rounded-full gap-2 flex flex-row items-center justify-start"
             >
               {/* <img src={item.path} className="w-[18px] h-[18px]" alt={item.name} /> */}
-              <div className="text-[#4db510]  underline text-[14px] font-semibold">
+              <div className="text-[#4db510] underline text-[14px] font-semibold">
                 Load more
               </div>
             </div>
           )}
+          
                     {showAll && (
             <div
               onClick={handleLoadLess}
-              className="cursor-pointer p-3 w-fit rounded-full gap-2 flex flex-row items-center justify-start"
+              className="cursor-pointer p-3 w-fit mx-auto rounded-full gap-2 flex flex-row items-center justify-start"
             >
               {/* <img src={item.path} className="w-[18px] h-[18px]" alt={item.name} /> */}
               <div className="text-[#4db510] underline text-[14px] font-semibold">
@@ -221,18 +239,19 @@ const Search = () => {
               </div>
             </div>
           )}
-        </div>
       </div>
 
 
-      <div className="text-[18px] font-semibold my-4">
-        Causes:
+
+      <div className="p-5  mx-5  mb-20 md:mb-7 rounded-[40px] bg-white border mt-8">
+      <div className="text-[24px] mb-7   font-bold mx-auto w-fit my-4">
+        Causes
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 mx-5 sm:grid-cols-2  md:grid-cols-3 gap-4">
         {causes.map((cause) => (
           <div
             key={cause.id}
-            className="rounded-[40px] hover:scale-105 border border-solid border-[#DFDFDF]  w-full mt-4"
+            className="rounded-[40px]  border border-solid border-[#DFDFDF]  w-full mt-4"
           >
             <div className="flex-col flex justify-center gap-2 items-center">
               <img
@@ -248,15 +267,16 @@ const Search = () => {
               <div className="flex items-center font-semibold justify-center m-2 mx-4 rounded-t-[10px]">
                 My Donation Provides
               </div>
-              <div className="my-4 mx-4 flex items-center text-[15px] justify-center mt-1 rounded-t-[10px]">
+              <div className="my-4 mx-4 flex items-center text-center text-[15px] justify-center mt-1 rounded-t-[10px]">
                 {cause.description}
               </div>
             </div>
-            <div className="w-fit mx-auto bg-[#4db510] hover:scale-105 text-white px-4 py-1 rounded-t-[10px]">
+            <div className="w-fit mx-auto bg-gray-200 hover:scale-105 font-semibold  px-4 py-1 rounded-full mb-5">
               Make a donation
             </div>
           </div>
         ))}
+      </div>
       </div>
 
 
@@ -268,7 +288,8 @@ const Search = () => {
 
 
 
-        </CentreCard>
+        </div>
+        </div>
         <div className="fixed bottom-0 left-0 w-full md:hidden">
           <Footer />
         </div>
