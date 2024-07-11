@@ -44,6 +44,7 @@ const ProfilePage = () => {
                 src="check.png"
               />
             </div>
+            
 
             <div className="flex flex-col gap-5 ">
               {/* <div className="bg-[#e9e9e9] md:ml-[83px] w-full flex  flex-row items-center justify-between  "> */}
