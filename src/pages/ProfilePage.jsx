@@ -20,7 +20,7 @@ function classNames(...classes) {
 const ProfilePage = () => {
   const [selectedTab, setSelectedTab] = useState("edit");
   return (
-    <div className="flex flex-col bg-white md:flex-row overflow-x-hidden h-screen ">
+    <div className="flex flex-col bg-white md:flex-row overflow-x-hidden bg-center ">
       <div className="fixed top-0 left-0 h-full hidden md:block ">
         <SideBar />
       </div>
@@ -44,7 +44,7 @@ const ProfilePage = () => {
                 src="check.png"
               />
             </div>
-            
+
 
             <div className="flex flex-col gap-5 ">
               {/* <div className="bg-[#e9e9e9] md:ml-[83px] w-full flex  flex-row items-center justify-between  "> */}
