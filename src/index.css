@@ -7,6 +7,10 @@
   padding: 10px;
   transition: all 1s ease-in-out 0.5s;
 }
+
+.green{
+  filter: brightness(0) saturate(100%) invert(66%) sepia(53%) saturate(433%) hue-rotate(77deg) brightness(99%) contrast(101%);
+}
 .image-color:hover {
   filter: brightness(0) saturate(100%) invert(66%) sepia(53%) saturate(433%) hue-rotate(77deg) brightness(99%) contrast(101%);
   background-color: #39393918;
