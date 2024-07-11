@@ -21,7 +21,7 @@ const Footer = () => {
         className={`rounded-[54px] px-[24px] py-[7px] cursor-pointer ${
           selectedTab === 'search' ? 'bg-[#4db510] ' : ''
         }`}
-        onClick={() => setSelectedTab('search')}
+        onClick={() => {setSelectedTab('search'),navigate('/search')}}
       >
         <img className={` w-[24px] ${selectedTab === 'search' ? 'filter-white' : ''}`} src="mdi_search.svg" />
       </div>
