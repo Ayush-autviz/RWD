@@ -15,7 +15,7 @@ import Search from './pages/Search'
 
 const App = () => {
   return (
-    <div >
+    <div className='bg-white' >
     <Routes>
       <Route path='/' element={<ProtectedRoute element={<Dashboard />} />} />
       <Route path='/login' element={<div className='bg-gray-50'><Login /></div>} />

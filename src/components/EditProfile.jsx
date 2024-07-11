@@ -6,7 +6,7 @@ const EditProfile = () => {
       <div className="flex items-center flex-col justify-center gap-2    w-fit">
         <img
           className=" w-[82px] h-[82px] rounded-full  "
-          src="Rectangle 5.svg"
+          src="donor-unsplash.jpg"
         />
         <div className="underline  cursor-pointer  ">Edit image</div>
       </div>
