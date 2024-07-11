@@ -151,7 +151,7 @@ const Search = () => {
     setShowAll(false);
   };
 
-  const displayedCategories = showAll ? categories : categories.slice(0, 6);
+  const displayedCategories = showAll ? categories : categories.slice(0, 9);
 
   return (
     <div className="flex flex-col md:flex-row">
