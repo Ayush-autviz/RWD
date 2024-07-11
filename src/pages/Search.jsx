@@ -204,7 +204,7 @@ const Search = () => {
         <div className="p-5 bg-white  mx-5  md:mb-0 rounded-[40px] shadow-custom-1">
 <div className="text-[24px]  font-bold mx-auto w-fit my-4">Categories</div>
       <div className="flex mx-8 md:mx-20  mt-5">
-        <div className="gap-3 flex flex-row items-center justify-center flex-wrap">
+        <div className="gap-3 flex flex-row items-center justify-center flex-wrap mx-auto">
           {displayedCategories.map((item, index) => (
             <div
               key={index}

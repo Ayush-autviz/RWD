@@ -20,7 +20,7 @@ function classNames(...classes) {
 const ProfilePage = () => {
   const [selectedTab, setSelectedTab] = useState("edit");
   return (
-    <div className="flex flex-col bg-white md:flex-row overflow-x-hidden ">
+    <div className="flex flex-col bg-white md:flex-row overflow-x-hidden h-full ">
       <div className="fixed top-0 left-0 h-full hidden md:block ">
         <SideBar />
       </div>
