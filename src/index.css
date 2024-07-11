@@ -8,6 +8,11 @@
   transition: all 1s ease-in-out 0.5s;
 }
 
+body{
+  color: black;
+  background-color: white;
+}
+
 .green{
   filter: brightness(0) saturate(100%) invert(66%) sepia(53%) saturate(433%) hue-rotate(77deg) brightness(99%) contrast(101%);
 }
@@ -57,3 +62,4 @@ input[type='number'] {
 .custom-select option:hover {
   background-color: #f1f5f9; /* Tailwind's bg-gray-100 */
 }
+
