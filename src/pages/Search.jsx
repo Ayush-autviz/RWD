@@ -271,17 +271,19 @@ const Search = () => {
                 {cause.title}
               </div>
             </div>
-            <div className="my-5">
+            <div className="my-3">
+           {/*  
               <div className="flex items-center font-semibold justify-center m-2 mx-4 rounded-t-[10px]">
                 My Donation Provides
-              </div>
-              <div className="my-4 mx-4 flex items-center text-center text-[15px] justify-center mt-1 rounded-t-[10px]">
+              </div> */}
+            <div className="w-fit mx-auto text-gray-500 hover:scale-105 font-semibold  px-4  rounded-full ">
+              Atlanta, GA
+            </div>
+              <div className="my-4 mx-4 font-semibold flex items-center text-center text-[16px] justify-center mt-1 rounded-t-[10px]">
                 {cause.description}
               </div>
             </div>
-            <div className="w-fit mx-auto bg-gray-200 hover:scale-105 font-semibold  px-4 py-1 rounded-full mb-5">
-              Make a donation
-            </div>
+
           </div>
         ))}
       </div>
