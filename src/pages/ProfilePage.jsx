@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import SideBar from "../components/SideBar";
 import Lottie from "lottie-react";
 import announce from "../assets/announce.json";
@@ -7,6 +7,7 @@ import CentreCard from "../components/CentreCard";
 import Footer from "../components/Footer";
 import Settings from "../components/Settings";
 import EditProfile from "../components/EditProfile";
+import { useTabContext } from "../context/TabProvider";
 
 const tabs = [
   { name: "Edit", href: "#", id: "edit" },
@@ -18,7 +19,15 @@ function classNames(...classes) {
 }
 
 const ProfilePage = () => {
-  const [selectedTab, setSelectedTab] = useState("edit");
+  const [localselectedTab, setlocalselectedTab] = useState("edit");
+
+  const { selectedTab, setSelectedTab }= useTabContext();
+
+  useEffect(()=>{
+    setSelectedTab('user');
+  })
+
+
   return (
     <div className="flex flex-col bg-white md:flex-row overflow-x-hidden bg-center ">
       <div className="fixed top-0 left-0 h-full hidden md:block ">
@@ -93,14 +102,14 @@ const ProfilePage = () => {
               <a
                 key={tab.id}
                 href={tab.href}
-                onClick={() => setSelectedTab(tab.id)}
+                onClick={() => setlocalselectedTab(tab.id)}
                 className={classNames(
-                  selectedTab === tab.id
+                  localselectedTab === tab.id
                     ? "bg-gray-100 text-gray-700"
                     : "text-gray-500 hover:text-gray-700",
                   "px-6 py-2 font-medium text-sm rounded-full"
                 )}
-                aria-current={selectedTab === tab.id ? "page" : undefined}
+                aria-current={localselectedTab === tab.id ? "page" : undefined}
               >
                 {tab.name}
               </a>
@@ -109,7 +118,7 @@ const ProfilePage = () => {
         </div>
         <div class="md:ml-[83px]   my-7">
           <div className="p-5  mx-5    mb-20 md:mb-0 rounded-[40px] shadow-custom-1">
-            {selectedTab === "setting" ? <Settings /> : <EditProfile />}
+            {localselectedTab === "setting" ? <Settings /> : <EditProfile />}
           </div>
           <div className="fixed bottom-0 left-0 w-full md:hidden">
             <Footer />

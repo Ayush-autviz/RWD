@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import SideBar from "../components/SideBar";
 import CentreCard from "../components/CentreCard";
 import DashboardCard from "../components/DashboardCard";
@@ -14,6 +14,7 @@ import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
 
 import { FreeMode, Pagination } from 'swiper/modules';
+import { useTabContext } from "../context/TabProvider";
 
 const categories = [
     {
@@ -142,6 +143,13 @@ const causes = [
 const Search = () => {
 
   const [showAll, setShowAll] = useState(false);
+
+  const { selectedTab, setSelectedTab }= useTabContext();
+
+  useEffect(()=>{
+    setSelectedTab('search');
+  })
+
 
   const handleLoadMore = () => {
     setShowAll(true);

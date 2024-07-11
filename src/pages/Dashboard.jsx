@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import SideBar from "../components/SideBar";
 import CentreCard from "../components/CentreCard";
 import DashboardCard from "../components/DashboardCard";
@@ -6,8 +6,15 @@ import ProfileCard from "../components/ProfileCard";
 import DonateNowCard from "../components/DonateNowCard";
 import AboutUsCard from "../components/AboutUsCard";
 import Footer from "../components/Footer";
+import { useTabContext } from "../context/TabProvider";
 
 const Dashboard = () => {
+
+  const { selectedTab, setSelectedTab }= useTabContext();
+
+  useEffect(()=>{
+    setSelectedTab('home');
+  })
   return (
     <div className="flex flex-col md:flex-row bg-white">
       <div className="fixed top-0 left-0 h-full hidden md:block">
