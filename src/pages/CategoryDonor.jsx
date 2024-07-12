@@ -5,21 +5,13 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const options = [
-  { value: "environmental", label: "Environmental" },
-  { value: "animal_welfare", label: "Animal welfare" },
-  { value: "education", label: "Education" },
-  { value: "healthcare", label: "Healthcare" },
-  { value: "community_development", label: "Community Development" },
-  { value: "food_insecurity", label: "Food insecurity" },
-  { value: "arts_and_culture", label: "Arts & Culture" },
-  { value: "religion_and_spirituality", label: "Religion & Spirituality" },
-  { value: "housing_insecurity", label: "Housing insecurity" },
-  {
-    value: "disability_rights_and_services",
-    label: "Disability Rights & Services",
-  },
-  { value: "civic_engagement", label: "Civic engagement" },
-  { value: "public_policy", label: "Public Policy" },
+  { value: "environmental", label: "Animal" },
+  { value: "animal_welfare", label: "Community" },
+  { value: "education", label: "Environmental" },
+  { value: "healthcare", label: "Human Rights" },
+  { value: "community_development", label: "Education" },
+  { value: "food_insecurity", label: "Health" },
+  { value: "arts_and_culture", label: "Religion" },
 ];
 
 export default function CategoryDonor() {

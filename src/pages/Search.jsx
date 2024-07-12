@@ -18,60 +18,32 @@ import { useTabContext } from "../context/TabProvider";
 
 const categories = [
     {
+        name: 'Animal',
+        path:'education.png'
+    },
+    {
+        name: 'Community',
+        path:'community.png'
+    },
+    {
+        name: 'Environmental',
+        path:'enviroment.png'
+    },
+    {
+        name: 'Human Rights',
+        path:'human.png'
+    },
+    {
         name: 'Education',
         path:'education.png'
     },
     {
-        name: 'Animal Welfare',
-        path:'welfare.png'
+        name: 'Health',
+        path:'Health.png'
     },
     {
-        name: 'Enviromental',
-        path:'enviroment.png'
-    },
-    {
-        name: 'Human rights/Social Justice',
-        path:'human.png'
-    },
-    {
-        name: 'Community Development',
-        path:'community.png'
-    },
-    {
-        name: 'Food Insecurity',
-        path:'food.png'
-    },
-    {
-        name: 'Arts & Culture',
-        path:'art.png'
-    },
-    {
-        name: 'Religion & Spirituality',
+        name: 'Religion',
         path:'religion.png'
-    },
-    {
-        name: 'Housing insecurity',
-        path:'housing.png'
-    },
-    {
-        name: 'Disablity Rights & Services',
-        path:'disability.png'
-    },
-    {
-        name: 'Civic engagement',
-        path:'civic.png'
-    },
-    {
-        name: 'Youth Developmnet',
-        path:'youth.png'
-    },
-    {
-        name: 'Emergency Response',
-        path:'emergency.png'
-    },
-    {
-        name: 'Peace building',
-        path:'peace.png'
     },
 
 ]
@@ -168,21 +140,20 @@ const Search = () => {
       </div>
       
       <div className="md:ml-[83px] flex-1 w-full overflow-y-auto flex flex-col">
-      <div className="flex-1  ml-0   rounded-b-[40px] border border-solid border-[#DFDFDF] bg-[#e9e9e9]
+      <div className="flex-1  ml-0 pt-8  rounded-b-[40px] border border-solid border-[#DFDFDF] bg-[#e9e9e9]
   flex flex-col  items-center py-[20px] px-[20px] ">
-        <div className="flex w-full justify-center items-center">
-          <div className="text-[40px] text-center font-[800]">
-            Discover CRWD
-          </div>
-        </div>
-      <div className="w-full mb-[-45px]">
+       
+      <div className="w-full flex justify-center items-center mb-[-45px]">
+      <div className="cursor-pointer md:hidden">
+      <img src="logo-rwd.svg" alt="Logo" />
+    </div>
           <form action="/search">
             <label
-                class="mx-auto mt-8 relative bg-white min-w-sm max-w-2xl flex flex-row md:flex-row items-center justify-center shadow-custom-1 py-1 px-1  gap-2  focus-within:border-gray-300 rounded-full"
+                class="mx-auto  relative bg-white min-w-sm max-w-2xl flex flex-row md:flex-row items-center justify-center shadow-custom-1 md:py-1 px-1  gap-2  focus-within:border-gray-300 rounded-full"
                 for="search-bar">
 
                 <input id="search-bar" placeholder="Search CRWD" name="q"
-                    class="px-6 py-2 w-full rounded-full flex-1 outline-none bg-white" required=""/>
+                    class="px-6 py-2 w-full rounded-full flex-1 outline-none bg-white md:min-w-[400px]" required=""/>
                 <button type="submit"
                     class="w-auto md:w-auto px-6 py-3 bg-gray-100 hover:scale-105  fill-white active:scale-95 duration-100 border will-change-transform overflow-hidden relative rounded-full transition-all">
                     <div class="flex items-center transition-all opacity-1">
@@ -209,14 +180,14 @@ const Search = () => {
       clipRule="evenodd" />
           </svg>
         </div> */}
-        <div className="p-5 bg-white  mx-5  md:mb-0 rounded-[40px] shadow-custom-1">
-<div className="text-[24px]  font-bold mx-auto w-fit my-4">Categories</div>
-      <div className="flex mx-8 md:mx-20  mt-5">
-        <div className="gap-5 flex flex-row items-center justify-center flex-wrap mx-auto">
+        <div className="p-2  md:mb-0 rounded-[40px]">
+{/* <div className="text-[24px]  font-bold mx-auto w-fit my-4">Categories</div> */}
+      <div className="flex mx-3 md:mx-20 ">
+        <div className="gap-2 flex flex-row items-center md:justify-center overflow-x-auto mx-auto pb-2">
           {displayedCategories.map((item, index) => (
             <div
               key={index}
-              className="p-3 cursor-pointer border-[1px] w-fit rounded-full hover:bg-gray-100 gap-2 flex flex-row items-center justify-start"
+              className="p-3 cursor-pointer border-[1px] min-w-[120px] text-center rounded-full hover:bg-gray-100 gap-2"
             >
               {/* <img src={item.path} className="w-[18px] h-[18px]" alt={item.name} /> */}
               <div className="text-[12px]  font-semibold">{item.name}</div>
@@ -224,64 +195,42 @@ const Search = () => {
           ))}
         </div>
       </div> 
-      {!showAll && (
-            <div
-              onClick={handleLoadMore}
-              className="cursor-pointer p-3 mx-auto w-fit  rounded-full gap-2 flex flex-row items-center justify-start"
-            >
-              {/* <img src={item.path} className="w-[18px] h-[18px]" alt={item.name} /> */}
-              <div className="text-[#4db510] underline text-[14px] font-semibold">
-                Load more
-              </div>
-            </div>
-          )}
-          
-                    {showAll && (
-            <div
-              onClick={handleLoadLess}
-              className="cursor-pointer p-3 w-fit mx-auto rounded-full gap-2 flex flex-row items-center justify-start"
-            >
-              {/* <img src={item.path} className="w-[18px] h-[18px]" alt={item.name} /> */}
-              <div className="text-[#4db510] underline text-[14px] font-semibold">
-                Load less
-              </div>
-            </div>
-          )}
       </div>
 
 
 
-      <div className="md:p-5 p-1 mx-4 mb-20 md:mb-7 rounded-[40px] bg-white border mt-8">
-      <div className="text-[24px] mb-7   font-bold mx-auto w-fit my-4">
+      <div className="md:p-5 p-1 mx-4 mb-20 md:mb-7 rounded-[40px] bg-white mt-8">
+      <div className="text-[24px] mb-5   font-bold mx-auto w-fit my-4">
         Causes
       </div>
-      <div className="grid grid-cols-1 mx-5 sm:grid-cols-2  md:grid-cols-3 gap-y-7 md:gap-x-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2  md:grid-cols-3 gap-4 ">
         {causes.map((cause) => (
           <div
             key={cause.id}
-            className="rounded-[40px]  border border-solid border-[#DFDFDF]  w-full mt-4"
+            className="rounded-[40px]  border border-solid border-[#DFDFDF]  w-full"
           >
-            <div className="flex-col flex justify-center gap-2 items-center">
-              <img
-                src={cause.image}
-                className="w-12 h-12 mt-[-24px] border-solid shadow-custom-1 border-[#DFDFDF] border rounded-full"
-                alt={cause.title}
-              />
-              <div className="font-semibold text-[#4db510] underline underline-offset-[10px]">
-                {cause.title}
-              </div>
-            </div>
-            <div className="my-3">
+           
+            <div className="my-3 p-2 py-6">
            {/*  
               <div className="flex items-center font-semibold justify-center m-2 mx-4 rounded-t-[10px]">
                 My Donation Provides
               </div> */}
-            <div className="w-fit mx-auto text-gray-500 hover:scale-105 text-sm  px-4  rounded-full ">
-              Atlanta, GA
-            </div>
-              <div className="my-4 mx-4 font-semibold flex items-center text-center text-[16px] justify-center mt-1 rounded-t-[10px]">
+           
+              <div className=" mb-2 mx-4 font-semibold flex text-[18px] rounded-t-[10px]">
                 {cause.description}
               </div>
+              <div className="flex-row flex px-5  justify-left gap-2 items-center">
+            <img
+                src={cause.image}
+                className="w-8 h-8 border-solid shadow-custom-1 border-[#DFDFDF] border rounded-full"
+                alt={cause.title}
+              />
+              <div className="font-semibold text-[14px]">
+                {cause.title}
+              <span className="block font-normal text-[12px]"> Atlanta, GA</span>
+              </div>
+              
+            </div>
             </div>
 
           </div>

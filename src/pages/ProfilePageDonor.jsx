@@ -46,11 +46,11 @@ const ProfilePageDonor = () => {
           <div className="flex flex-col md:flex-row items-center justify-center mx-auto md:gap-20">
             <div className="relative ">
               <img
-                className=" w-[82px] h-[82px] rounded-full md:w-[133px] md:h-[133px] "
+                className=" w-[82px] h-[82px] object-cover rounded-full md:w-[133px] md:h-[133px] "
                 src="userp.jpg"
               />
               <img
-                className="absolute w-[22px] h-[22px] md:w-[45px] md:h-[45px] right-[-3px] bottom-[3px]  md:bottom-0"
+                className="absolute w-[22px] h-[22px] md:w-[45px] object-cover md:h-[45px] right-[-3px] bottom-[3px]  md:bottom-0"
                 src="check.png"
               />
             </div>
