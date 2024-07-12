@@ -28,20 +28,20 @@ const DashboardDonar = () => {
             <DonateNowCardDonor />
             <div className="mt-[20px] grid lg:grid-cols-3  md:grid-cols-2 grid-cols-1  gap-5">
               <DashboardCard
-                image="stat (1).png"
-                heading="Running stats"
-                text="2000 meals provides per month"
+                image="support (1).png"
+                heading="I Support"
+                text="8 Causes"
               />
               <DashboardCard
-                image="achievement (1).png"
-                heading="Our highlights"
-                text="received the NAACP award for non-profit achievement 2024"
+                image="passionate.png"
+                heading="I Am Passionate About"
+                text="Early childhood education & Women’s healthcare"
               />
               <div className=" md:col-span-2  lg:col-span-1">
               <DashboardCard
-                image="mission (1).png"
-                heading="Our Mission is to"
-                text="eliminate food poverty across the metro-Atlanta area. Our mission is to eliminate food poverty across the metro-Atlanta area"
+                image="subsidy.png"
+                heading="My Charity goal is"
+                text="To Contribute to efforts to focused  on ending world hunger"
               />
               </div>
             </div>
