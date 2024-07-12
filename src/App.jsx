@@ -12,15 +12,34 @@ import CategoryNP from './pages/CategoryNP'
 import CategoryDonor from './pages/CategoryDonor'
 import ProfilePageDonor from './pages/ProfilePageDonor'
 import Search from './pages/Search'
+import DashboardDonar from './pages/DashboardDonar'
+
+const getRoleFromLocalStorage = () => {
+  const isAuthenticated = localStorage.getItem('isAuthenticated');
+  if(isAuthenticated){
+    return isAuthenticated
+  }
+  return null;
+};
 
 const App = () => {
+
+  const role = getRoleFromLocalStorage();
+
+  console.log(role);
+
   return (
     <div className='bg-white' >
     <Routes>
       <Route path='/' element={<ProtectedRoute element={<Dashboard />} />} />
+      <Route path='/dash' element={<ProtectedRoute element={<DashboardDonar />} />} />
       <Route path='/login' element={<div className='bg-gray-50'><Login /></div>} />
       <Route path='/loginNP' element={<LoginNP />} />
-      <Route path='/profile' element={<ProtectedRoute element={<ProfilePage />} />} />
+      <Route path='/profile' element={
+          <ProtectedRoute element={
+            getRoleFromLocalStorage() === 'donar' ? <ProfilePageDonor /> : <ProfilePage />
+          } />
+        } />
       <Route path='/profileDonor' element={<ProtectedRoute element={<ProfilePageDonor />} />} />
       <Route path='/signup' element={<SignUp/>} />
       <Route path='/signupNP' element={<SignUpNP/>} />

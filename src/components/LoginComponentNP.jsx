@@ -14,7 +14,7 @@ export default function LoginComponentNP() {
   const navigate = useNavigate();
 
   const handleLogin = () => {
-    localStorage.setItem("isAuthenticated", "donar");
+    localStorage.setItem("isAuthenticated", "npo");
     navigate("/");
   };
 
