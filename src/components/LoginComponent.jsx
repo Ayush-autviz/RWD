@@ -3,6 +3,7 @@ import login from "../assets/login.json";
 import { useEffect, useRef, useState } from "react";
 import Select from "react-tailwindcss-select";
 import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
 
 const options = [
   { value: "fox", label: "🦊 Fox" },
@@ -22,6 +23,7 @@ export default function LoginComponent() {
     console.log("value:", value);
     setAnimal(value);
   };
+  const { setRole } = useAuth();
 
   // useEffect(()=>{
   //   const isAuthenticated = localStorage.getItem('isAuthenticated');
@@ -32,6 +34,7 @@ export default function LoginComponent() {
 
   const handleLogin = () => {
     localStorage.setItem("isAuthenticated", "donar");
+    setRole("donar");
     navigate("/");
   };
 

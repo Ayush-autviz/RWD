@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { Route, Routes, useNavigate } from "react-router-dom";
 import Dashboard from "./pages/Dashboard";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
-import { Route, Routes } from "react-router-dom";
 import ProfilePage from "./pages/ProfilePage";
 import LoginNP from "./pages/LoginNP";
 import SignUpNP from "./pages/SignUpNP";
@@ -13,36 +13,39 @@ import CategoryDonor from "./pages/CategoryDonor";
 import ProfilePageDonor from "./pages/ProfilePageDonor";
 import Search from "./pages/Search";
 import DashboardDonar from "./pages/DashboardDonar";
+import { useAuth } from "./context/AuthContext";
 
 const getRoleFromLocalStorage = () => {
   const isAuthenticated = localStorage.getItem("isAuthenticated");
-  if (isAuthenticated) {
-    return isAuthenticated;
-  }
-  return null;
+  return isAuthenticated || null;
 };
 
 const App = () => {
-  const role = getRoleFromLocalStorage();
+  const { role } = useAuth();
+
+
+
+  // useEffect(() => {
+  //   if (role) {
+  //     navigate("/");
+  //   }
+  // }, [role, navigate]);
 
   console.log(role);
 
   return (
     <div className="bg-white">
       <Routes>
-        <Route path="/" element={<ProtectedRoute element={
-                     <ProtectedRoute
-                     element={
-                       getRoleFromLocalStorage() === "donar" ? (
-                        
-                         <DashboardDonar />
-                       ) : (
-                        <Dashboard />
-                       )
-                     }
-                   />
-          } />} />
-
+        <Route
+          path="/"
+          element={
+            <ProtectedRoute
+              element={
+                role === "donar" ? <DashboardDonar /> : <Dashboard />
+              }
+            />
+          }
+        />
         <Route
           path="/login"
           element={
@@ -51,25 +54,18 @@ const App = () => {
             </div>
           }
         />
-        {/* <Route path="/loginNP" element={<LoginNP />} /> */}
+        <Route path="/npo" element={<Dashboard />} />
+        <Route path="/donor" element={<DashboardDonar />} />
         <Route
           path="/profile"
           element={
             <ProtectedRoute
               element={
-                getRoleFromLocalStorage() === "donar" ? (
-                  <ProfilePageDonor />
-                ) : (
-                  <ProfilePage />
-                )
+                role === "donar" ? <ProfilePageDonor /> : <ProfilePage />
               }
             />
           }
         />
-        {/* <Route
-          path="/profileDonor"
-          element={<ProtectedRoute element={<ProfilePageDonor />} />}
-        /> */}
         <Route path="/signup" element={<SignUp />} />
         <Route path="/signupNP" element={<SignUpNP />} />
         <Route path="/categoryNP" element={<CategoryNP />} />

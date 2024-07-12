@@ -31,7 +31,7 @@ export default function CategoryNP() {
       };
 
       const handleContinue = () => {
-        navigate("/");
+        navigate("/npo");
       };
 
     const [animal, setAnimal] = useState(null);

@@ -1,11 +1,14 @@
 import Lottie from "lottie-react";
 import signup from "../assets/signup.json";
 import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
 
 export default function SignUpComponent() {
   const navigate = useNavigate();
+  const { setRole } = useAuth();
   const handleLogin = () => {
     localStorage.setItem("isAuthenticated", "donar");
+    setRole("donar");
     navigate("/verification");
   };
   return (

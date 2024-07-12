@@ -4,9 +4,10 @@ import { useLocation, useNavigate } from "react-router-dom";
 
 export default function VerificationScreen() {
   const location = useLocation();
+  console.log(location,'location');
   const navigate = useNavigate();
   const handleNext = ()=>{
-    if(location?.state?.tab==='donor'){
+    if(location?.state?.tab==='npo'){
          navigate('/categoryNP');
     }else{
       navigate('/categoryDonor');

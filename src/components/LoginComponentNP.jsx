@@ -3,6 +3,7 @@ import login from "../assets/login.json";
 import { useState } from "react";
 import Select from "react-tailwindcss-select";
 import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
 
 const options = [
   { value: "fox", label: "🦊 Fox" },
@@ -12,9 +13,10 @@ const options = [
 
 export default function LoginComponentNP() {
   const navigate = useNavigate();
-
+  const { setRole } = useAuth();
   const handleLogin = () => {
     localStorage.setItem("isAuthenticated", "npo");
+    setRole("npo");
     navigate("/");
   };
 

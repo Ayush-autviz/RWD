@@ -1,13 +1,18 @@
 import Lottie from "lottie-react";
 import signup from "../assets/signup.json";
 import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
 
 export default function SignUpComponentNP() {
-  const handleLogin = () => {
-    localStorage.setItem("isAuthenticated", "npo");
-    navigate("/verification", (state = { tab: "npo" }));
-  };
   const navigate = useNavigate();
+  const { setRole } = useAuth();
+  const handleLogin = (e) => {
+    e.preventDefault();
+    localStorage.setItem("isAuthenticated", "npo");
+    setRole("npo");
+    navigate("/verification", {state : { tab: "npo" }});
+  };
+  
   return (
     <>
       <section className="bg-gray-50 md:w-fit md:mx-auto mx-4">

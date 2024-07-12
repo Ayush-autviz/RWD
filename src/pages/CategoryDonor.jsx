@@ -22,7 +22,7 @@ export default function CategoryDonor() {
   };
 
   const handleContinue = () => {
-    navigate("/");
+    navigate("/donor");
   };
 
   const [animal, setAnimal] = useState(null);

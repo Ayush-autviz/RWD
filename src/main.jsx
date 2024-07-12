@@ -4,13 +4,16 @@ import App from './App.jsx'
 import './index.css'
 import {BrowserRouter} from 'react-router-dom'
 import { TabProvider } from './context/TabProvider.jsx'
+import { AuthProvider } from './context/AuthContext.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
   <BrowserRouter>
+  <AuthProvider>
   <TabProvider>
     <App />
   </TabProvider>
+  </AuthProvider>
     </BrowserRouter>
   </React.StrictMode>,
 )
