@@ -42,7 +42,8 @@ export default function Dropdown() {
           <form action="#" method="POST">
             <MenuItem>
               <button
-                type="submit"
+                onClick={()=>{ localStorage.removeItem('isAuthenticated');
+                  navigate('/login');}}
                 className="block w-full px-4 py-2 text-left text-sm text-gray-700 data-[focus]:bg-[#dddddd24] data-[focus]:text-gray-900"
               >
                 Sign out
