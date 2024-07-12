@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 export default function SignUpComponentNP() {
   const handleLogin = () => {
-    localStorage.setItem("isAuthenticated", "donar");
+    localStorage.setItem("isAuthenticated", "npo");
     navigate("/verification", (state = { tab: "npo" }));
   };
   const navigate = useNavigate();
