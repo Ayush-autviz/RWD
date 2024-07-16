@@ -21,10 +21,10 @@ const DonateNowCard = () => {
          </div>
      </div>
     </div>
-    <div className='mx-auto pt-3 xl:mr-0 md:mt-0 hidden lg:order-1 order-2 mb-[-50px] md:block lg:relative z-[4]'>
-     {/* <img src='char.svg'/> */}
+    <div className='mx-auto   xl:mr-0 md:mt-0 hidden lg:order-1 order-2  md:block lg:relative z-[4]'>
+     <img className='w-[240px] h-[233px] mt-3 lg:mt-0 object-cover rounded-[20px]' src='foody.png'/>
 
-     <Lottie className='w-[220px] h-[233px]  ml-4 mt-[-40px] bg-red ' animationData={maingif} loop={true} />
+     {/* <Lottie className='w-[220px] h-[233px]  ml-4 mt-[-40px] bg-red ' animationData={maingif} loop={true} /> */}
 
     </div>
     {/* <div className='flex w-full center xl:left rounded-[5px] lg:hidden cursor-pointer mt-5 order-3  bg-[#464645] hover:bg-[#2a2a29] duration-200 px-[20px] py-[13px]  flex-row gap-2 items-center justify-center'>
