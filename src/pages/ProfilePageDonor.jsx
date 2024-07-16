@@ -49,17 +49,17 @@ const ProfilePageDonor = () => {
                 className=" w-[82px] h-[82px] object-cover rounded-full md:w-[133px] md:h-[133px] "
                 src="userp.jpg"
               />
-              <img
+              {/* <img
                 className="absolute w-[22px] h-[22px] md:w-[45px] object-cover md:h-[45px] right-[-3px] bottom-[3px]  md:bottom-0"
                 src="check.png"
-              />
+              /> */}
             </div>
 
 
             <div className="flex flex-col gap-2 ">
               {/* <div className="bg-[#e9e9e9] md:ml-[83px] w-full flex  flex-row items-center justify-between  "> */}
 
-              <div className="font-poppins px-10 mx-auto  md:mx-0  mt-5 md:mt-0  text-[#4db510] text-[25px] font-semibold">
+              <div className="font-poppins px-10 mx-auto  md:mx-0  mt-5 md:mt-0  text-[25px] font-semibold">
                 Luke Warm
               </div>
 

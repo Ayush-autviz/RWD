@@ -24,9 +24,9 @@ const ProfileCardDonor = () => {
       </div>
       <div className="relative">
         <img className=" w-[82px] h-[82px] rounded-full object-cover md:w-[133px] md:h-[133px] " src="userp.jpg" />
-        <img className="absolute w-[22px] h-[22px] md:w-[45px] object-cover md:h-[45px] right-[-3px] bottom-[3px]  md:bottom-0" src="check.png" />
+        {/* <img className="absolute w-[22px] h-[22px] md:w-[45px] object-cover md:h-[45px] right-[-3px] bottom-[3px]  md:bottom-0" src="check.png" /> */}
       </div>
-      <div className="cursor-pointer hidden md:block text-[#4db510] mt-[17px] font-poppins text-[16px] font-semibold ">
+      <div className="cursor-pointer hidden md:block mt-[17px] font-poppins text-[16px] font-semibold ">
         Luke Warm
       </div>
       <div className="h-[1px] w-full bg-[#DFDFDF] mt-5 hidden md:block" />

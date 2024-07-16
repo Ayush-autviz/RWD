@@ -143,7 +143,7 @@ const Search = () => {
       <div className="flex-1  ml-0 pt-8  rounded-b-[40px] border border-solid border-[#DFDFDF] bg-[#e9e9e9]
   flex flex-col  items-center py-[20px] px-[20px] ">
        
-      <div className="w-full flex justify-center items-center mb-[-45px]">
+      <div className="w-full flex justify-center items-center ">
       <div className="cursor-pointer md:hidden">
       <img src="logo-rwd.svg" alt="Logo" />
     </div>
@@ -153,9 +153,9 @@ const Search = () => {
                 for="search-bar">
 
                 <input id="search-bar" placeholder="Search CRWD" name="q"
-                    class="px-6 py-2 w-full rounded-full flex-1 outline-none bg-white md:min-w-[400px]" required=""/>
+                    class="px-6 py-4 md:py-2 w-full rounded-full flex-1 outline-none bg-white md:min-w-[400px]" required=""/>
                 <button type="submit"
-                    class="w-auto md:w-auto px-6 py-3 bg-gray-100 hover:scale-105  fill-white active:scale-95 duration-100 border will-change-transform overflow-hidden relative rounded-full transition-all">
+                    class=" px-6 md:py-3 py-3 bg-gray-100 hover:scale-105  fill-white active:scale-95 duration-100 border will-change-transform overflow-hidden relative rounded-full transition-all">
                     <div class="flex items-center transition-all opacity-1">
                         <span class="text-sm font-semibold whitespace-nowrap truncate mx-auto">
                             Search
@@ -183,7 +183,7 @@ const Search = () => {
         <div className="p-2  md:mb-0 rounded-[40px]">
 {/* <div className="text-[24px]  font-bold mx-auto w-fit my-4">Categories</div> */}
       <div className="flex mx-3 md:mx-20 ">
-        <div className="gap-2 flex flex-row items-center md:justify-center overflow-x-auto mx-auto pb-2">
+        <div className="gap-2 flex flex-row items-center md:justify-center overflow-x-auto mx-auto pb-2 custom-scrollbar">
           {displayedCategories.map((item, index) => (
             <div
               key={index}
@@ -199,10 +199,10 @@ const Search = () => {
 
 
 
-      <div className="md:p-5 p-1 mx-4 mb-20 md:mb-7 rounded-[40px] bg-white mt-8">
-      <div className="text-[24px] mb-5   font-bold mx-auto w-fit my-4">
+      <div className="md:p-5 p-1 mx-4 mb-20 md:mb-7 rounded-[40px] bg-white mt-4">
+      {/* <div className="text-[24px] mb-5   font-bold mx-auto w-fit my-4">
         Causes
-      </div>
+      </div> */}
       <div className="grid grid-cols-1 sm:grid-cols-2  md:grid-cols-3 gap-4 ">
         {causes.map((cause) => (
           <div

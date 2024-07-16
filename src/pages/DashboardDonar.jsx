@@ -9,6 +9,7 @@ import Footer from "../components/Footer";
 import { useTabContext } from "../context/TabProvider";
 import ProfileCardDonor from "../components/ProfileCardDonor";
 import DonateNowCardDonor from "../components/DonateNowCardDonor";
+import AboutUsCardDonor from "../components/AboutUsCardDonor";
 
 const DashboardDonar = () => {
 
@@ -45,7 +46,7 @@ const DashboardDonar = () => {
               />
               </div>
             </div>
-            <AboutUsCard />
+            <AboutUsCardDonor />
           </div>
         </CentreCard>
         <ProfileCardDonor className="order-1 md:order-2" />

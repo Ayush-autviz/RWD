@@ -58,7 +58,7 @@ const ProfilePage = () => {
             <div className="flex flex-col gap-2 ">
               {/* <div className="bg-[#e9e9e9] md:ml-[83px] w-full flex  flex-row items-center justify-between  "> */}
 
-              <div className="font-poppins px-10 mx-auto  md:mx-0  mt-5 md:mt-0  text-[#4db510] text-[25px] font-semibold">
+              <div className="font-poppins px-10 mx-auto  md:mx-0  mt-5 md:mt-0   text-[25px] font-semibold">
                 Grocery Spot
               </div>
 

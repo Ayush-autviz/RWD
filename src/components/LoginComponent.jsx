@@ -53,14 +53,14 @@ export default function LoginComponent() {
             </p>
             <form action="" className="flex flex-col gap-4">
               <input
-                className="p-2 py-4 mt-4 rounded-xl border text-sm bg-white"
+                className="p-2 py-4 mt-4 rounded-xl border  bg-white"
                 type="email"
                 name="email"
                 placeholder="Email"
               />
               <div className="relative">
                 <input
-                  className="p-2 py-4 rounded-xl border w-full text-sm  bg-white"
+                  className="p-2 py-4 rounded-xl border w-full   bg-white"
                   type="password"
                   name="password"
                   placeholder="Password"

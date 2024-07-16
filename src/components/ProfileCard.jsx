@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import handshake from '../assets/handshake.json'
 import Lottie from "lottie-react";
 import Dropdown from "./Dropdown";
+import share from '../assets/share.json'
 
 const ProfileCard = () => {
   const [clicked,setClicked] = useState(false);
@@ -26,7 +27,7 @@ const ProfileCard = () => {
         <img className=" w-[82px] h-[82px] rounded-full md:w-[133px] md:h-[133px] " src="donor-unsplash.jpg" />
         <img className="absolute w-[22px] h-[22px] md:w-[45px] md:h-[45px] right-[-3px] bottom-[3px]  md:bottom-0" src="check.png" />
       </div>
-      <div className="cursor-pointer hidden md:block text-[#4db510] mt-[17px] font-poppins text-[16px] font-semibold ">
+      <div className="cursor-pointer hidden md:block  mt-[17px] font-poppins text-[16px] font-semibold ">
         Grocery Spot
       </div>
       <div className="h-[1px] w-full bg-[#DFDFDF] mt-5 hidden md:block" />
@@ -85,7 +86,7 @@ const ProfileCard = () => {
       <div  className="cursor-pointer rounded-[5px] mt-5 w-full  bg-[#464645] hover:bg-[#2e2e2e
 ] duration-200 px-[12px] py-[13px] flex flex-row md:flex-col lg:flex-row gap-2 items-center justify-center">
         <div className="w-[39px] h-[39px] mr-2">
-      <Lottie className="" animationData={handshake} loop={true} />
+       <Lottie className="" animationData={share} loop={true} />
       </div>
         <div className="text-white font-poppins text-[14px] text-center font-semibold">
           Share this cause
