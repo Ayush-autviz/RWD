@@ -10,7 +10,7 @@ const ProfileCardDonor = () => {
     <div className="bg-[#FBFBFB] flex flex-row items-center justify-between p-5 md:hidden">
 <div>
 </div>
-<div className="font-poppins text-[#4db510] text-[22px] font-semibold">
+<div className="font-poppins  text-[22px] font-semibold">
   Luke Warm
 </div>
 <div >
