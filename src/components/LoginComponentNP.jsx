@@ -58,9 +58,9 @@ export default function LoginComponentNP() {
                   placeholder="Password"
                 />
 
-                <a className="text-xs text-right block py-1 underline cursor-pointer" href="#">
+                <Link className="text-xs text-right block py-1 underline cursor-pointer" to="/email">
                   Forgot your password?
-                </a>
+                </Link>
               </div>
 
               <button

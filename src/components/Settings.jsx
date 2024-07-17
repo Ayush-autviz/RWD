@@ -5,8 +5,13 @@ import ChangeEmail from "./ChangeEmail";
 import PaymentMethod from "./PaymentMethod";
 import TermsAndCondition from "./TermsAndCondition";
 import PrivacyPolicy from "./PrivacyPolicy";
+import History from "./History";
+import HistoryNpo from "./HistoryNpo";
+import { useAuth } from "../context/AuthContext";
 
 const Settings = () => {
+
+  const {role} = useAuth();
   const [activeIndex, setActiveIndex] = useState(null);
 
   function classNames(...classes) {
@@ -26,8 +31,10 @@ const Settings = () => {
     //  {heading: 'Change Username',component:<ChangeUsername/>,arrow:true},
     { name: "Change Email", id: "email" },
     { name: "Payment Methods", id: "payment" },
+    { name: "Donation History", id: "history" },
     { name: "Terms of use", id: "terms" },
     { name: "Privacy Policy", id: "policy" },
+
   ];
 
   const handleChange = (event) => {
@@ -115,14 +122,17 @@ const Settings = () => {
       {selectedTab === "payment" && <PaymentMethod />}
       {selectedTab === "terms" && <TermsAndCondition />}
       {selectedTab === "policy" && <PrivacyPolicy />}
+      {selectedTab === "history" && <>{role === "npo" ? <History /> : <HistoryNpo/>}</> }
       </div>
 
-
+       <div className="block md:hidden">
       {selectedTabMd === "password" && <ChangePassword />}
       {selectedTabMd === "email" && <ChangeEmail />}
       {selectedTabMd === "payment" && <PaymentMethod />}
       {selectedTabMd === "terms" && <TermsAndCondition />}
       {selectedTabMd === "policy" && <PrivacyPolicy />}
+      {selectedTabMd === "history" && <>{role === "npo" ? <History /> : <HistoryNpo/>}</>  }
+      </div>
 
 
     </div>

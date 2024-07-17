@@ -9,7 +9,7 @@ export default function SignUpComponent() {
   const handleLogin = () => {
     localStorage.setItem("isAuthenticated", "donar");
     setRole("donar");
-    navigate("/verification");
+    navigate("/verification",{state : { tab: "donor" }});
   };
   return (
     <>

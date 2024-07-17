@@ -37,7 +37,7 @@ const ChangePassword = () => {
 
         </div>
         <button
-              
+               onClick={()=>{navigate('/login')}}
               className="bg-[#464645] mt-4 rounded-xl text-white py-4 w-full  hover:scale-105 duration-300"
             >
               Update

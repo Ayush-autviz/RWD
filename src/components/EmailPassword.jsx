@@ -2,18 +2,10 @@ import Lottie from "lottie-react";
 import signup from '../assets/signup.json'
 import { useLocation, useNavigate } from "react-router-dom";
 
-export default function VerificationScreen() {
-  const location = useLocation();
-  console.log(location,'location');
+export default function EmailPassword() {
   const navigate = useNavigate();
   const handleNext = ()=>{
-    if(location?.state?.tab==='npo'){
-         navigate('/categoryNP');
-    }else if(location?.state?.tab==='donor'){
-      navigate('/categoryDonor');
-    }else{
-      navigate('/forgotPassword');
-    }
+      navigate('/verification',{state : { tab: "email" }});
   }
   return (<>
 <section className="bg-[#FBFBFB]  min-h-screen  flex items-center justify-center">
@@ -21,27 +13,23 @@ export default function VerificationScreen() {
   <div className="my-5  bg-white rounded-2xl mx-3 shadow-lg w-[100%] md:w-[500px]  md:p-8 p-2  items-center h-fit">
     {/* form */}
     <div className="">
-      <h2 className="font-bold text-2xl text-secondary text-center pb-2">Verify your email</h2>
+      <h2 className="font-bold text-2xl text-secondary text-center pb-2">Forgot Password</h2>
       <p className="text-xs  text-secondary text-center font-poppins  pb-4">
-        Enter the verification code sent on your email
+        Enter your email address
       </p>
       <form action="" className="flex flex-col gap-4">
         <div className="relative">
           <input
             className="p-2 py-4 rounded-xl border w-full text-sm  bg-white"
-
-            name="code"
-             type="number"
-            placeholder="Verification code"
+            name="email"
+            type="email"
+            placeholder="Enter email address"
           />
 
         </div>
 
       </form>
       <div className="mt-3 text-xs flex flex-col gap-3 justify-between items-center text-secondary">
-      <p className="text-xs  text-secondary">
-       Didn't receive it? <span className="font-bold underline cursor-pointer hover:scale-105">Resend</span>
-      </p>
       <button
                 onClick={handleNext}
                 className="bg-[#464645]  rounded-xl text-white py-4 w-full  hover:scale-105 duration-300"

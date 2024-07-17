@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import SideBar from "../components/SideBar";
 import CentreCard from "../components/CentreCard";
 import DashboardCard from "../components/DashboardCard";
@@ -7,9 +7,14 @@ import DonateNowCard from "../components/DonateNowCard";
 import AboutUsCard from "../components/AboutUsCard";
 import Footer from "../components/Footer";
 import { useTabContext } from "../context/TabProvider";
+import Modal from "../components/Modal";
+import SingleDonationModal from "../components/SingleDonationModal";
+import UnsubscribeModal from "../components/UnsubscribeModal";
 
 const Dashboard = () => {
-
+  const [open, setOpen] = useState(false);
+  const [openModal,setOpenModal] = useState(false);
+  
   const { selectedTab, setSelectedTab }= useTabContext();
 
   useEffect(()=>{
@@ -23,7 +28,7 @@ const Dashboard = () => {
       <div className="md:ml-[90px] flex-1 overflow-y-auto flex flex-col-reverse md:flex-row">
         <CentreCard className="order-2 md:order-1">
           <div className="mx-0 rounded-[10px]">
-            <DonateNowCard />
+            <DonateNowCard open={open} setOpen={setOpen} />
             <div className="mt-[20px] grid lg:grid-cols-3  md:grid-cols-2 grid-cols-1  gap-5">
               <DashboardCard
                 image="stat (1).png"
@@ -46,11 +51,14 @@ const Dashboard = () => {
             <AboutUsCard />
           </div>
         </CentreCard>
-        <ProfileCard className="order-1 md:order-2" />
+        <ProfileCard open={open} setOpen={setOpen} openModal={openModal} setOpenModal={setOpenModal}   className="order-1 md:order-2" />
         <div className="fixed bottom-0 left-0 w-full md:hidden">
           <Footer />
         </div>
       </div>
+      <SingleDonationModal open={openModal} setOpen={setOpenModal}/>
+      <Modal open={open} setOpen={setOpen}/>
+      
     </div>
   );
 };

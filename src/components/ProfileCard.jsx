@@ -3,9 +3,12 @@ import handshake from '../assets/handshake.json'
 import Lottie from "lottie-react";
 import Dropdown from "./Dropdown";
 import share from '../assets/share.json'
+import { useActivation } from "../context/DonationContext";
 
-const ProfileCard = () => {
+
+const ProfileCard = ({open,setOpen,openModal,setOpenModal}) => {
   const [clicked,setClicked] = useState(false);
+  const {activated , setActivated } = useActivation();
   return (
     <div className="min-w-[25%] bg-[#FBFBFB] "> 
     <div className="bg-[#FBFBFB] flex flex-row items-center justify-between p-5 md:hidden">
@@ -15,7 +18,7 @@ const ProfileCard = () => {
   Grocery Spot
 </div>
 <div >
-<Dropdown/>
+<Dropdown />
 </div>
 
     </div>
@@ -57,7 +60,7 @@ const ProfileCard = () => {
           </div>
         </div>
       </div>
-{  !clicked &&(  <>    <div onClick={()=>{setClicked(true)}} className="cursor-pointer rounded-[5px] mt-5 w-full  bg-[#464645]  hover:bg-[#2a2a29] duration-200 px-[12px] py-[13px] flex flex-row md:flex-col lg:flex-row gap-2 items-center justify-center">
+    {!activated &&(  <>    <div onClick={()=>{setOpen(true)}} className="cursor-pointer rounded-[5px] mt-5 w-full  bg-[#464645]  hover:bg-[#2a2a29] duration-200 px-[12px] py-[13px] flex flex-row md:flex-col lg:flex-row gap-2 items-center justify-center">
         <div className="w-[39px] h-[39px] mr-2">
       <Lottie className="" animationData={handshake} loop={true} />
       </div>
@@ -73,9 +76,9 @@ const ProfileCard = () => {
       )}
 
       {
-        clicked && (
+        activated && (
           <div className="flex flex-col gap-2 w-full">
-      <div  className="cursor-pointer rounded-[5px] mt-5 w-full   bg-[#393939] hover:bg-[#333333] duration-200 px-[12px] py-[13px] flex flex-row md:flex-col lg:flex-row gap-2 items-center justify-center">
+      <div onClick={()=>{setOpenModal(true)}}  className="cursor-pointer rounded-[5px] mt-5 w-full   bg-[#393939] hover:bg-[#333333] duration-200 px-[12px] py-[13px] flex flex-row md:flex-col lg:flex-row gap-2 items-center justify-center">
         <div className="w-[39px] h-[39px] mr-2 flex items-center justify-center">
         <img className='h-8 w-8' src='donation-1.gif'/>
       </div>
@@ -96,6 +99,7 @@ const ProfileCard = () => {
         )
       }
     </div>
+   
     </div>
   );
 };

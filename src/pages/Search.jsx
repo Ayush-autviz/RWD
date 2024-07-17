@@ -15,6 +15,8 @@ import 'swiper/css/pagination';
 
 import { FreeMode, Pagination } from 'swiper/modules';
 import { useTabContext } from "../context/TabProvider";
+import Modal from "../components/Modal";
+import NotFound from "../components/NotFound";
 
 const categories = [
     {
@@ -115,6 +117,7 @@ const causes = [
 const Search = () => {
 
   const [showAll, setShowAll] = useState(false);
+  const [showSearchResult,setShowSearchResult] = useState(false);
 
   const { selectedTab, setSelectedTab }= useTabContext();
 
@@ -147,14 +150,14 @@ const Search = () => {
       <div className="cursor-pointer md:hidden">
       <img src="logo-rwd.svg" alt="Logo" />
     </div>
-          <form action="/search">
+         
             <label
                 class="mx-auto  relative bg-white min-w-sm max-w-2xl flex flex-row md:flex-row items-center justify-center shadow-custom-1 md:py-1 px-1  gap-2  focus-within:border-gray-300 rounded-full"
                 for="search-bar">
 
                 <input id="search-bar" placeholder="Search CRWD" name="q"
                     class="px-6 py-4 md:py-2 w-full rounded-full flex-1 outline-none bg-white md:min-w-[400px]" required=""/>
-                <button type="submit"
+                <button onClick={()=>{setShowSearchResult(true)}} 
                     class=" px-6 md:py-3 py-3 bg-gray-100 hover:scale-105  fill-white active:scale-95 duration-100 border will-change-transform overflow-hidden relative rounded-full transition-all">
                     <div class="flex items-center transition-all opacity-1">
                         <span class="text-sm font-semibold whitespace-nowrap truncate mx-auto">
@@ -163,7 +166,7 @@ const Search = () => {
                     </div>
                 </button>
             </label>
-        </form>
+        
         </div>
 
         </div>
@@ -198,45 +201,52 @@ const Search = () => {
       </div>
 
 
-
-      <div className="md:p-5 p-1 mx-4 mb-20 md:mb-7 rounded-[40px] bg-white mt-4">
-      {/* <div className="text-[24px] mb-5   font-bold mx-auto w-fit my-4">
-        Causes
-      </div> */}
-      <div className="grid grid-cols-1 sm:grid-cols-2  md:grid-cols-3 gap-4 ">
-        {causes.map((cause) => (
-          <div
-            key={cause.id}
-            className="rounded-[40px]  border border-solid border-[#DFDFDF]  w-full"
-          >
-           
-            <div className="my-3 p-2 py-6">
-           {/*  
-              <div className="flex items-center font-semibold justify-center m-2 mx-4 rounded-t-[10px]">
-                My Donation Provides
-              </div> */}
-           
-              <div className=" mb-2 mx-4 font-semibold flex text-[18px] rounded-t-[10px]">
-                {cause.description}
+      {
+        !showSearchResult && <div className="md:p-5 p-1 mx-4 mb-20 md:mb-7 rounded-[40px] bg-white mt-4">
+        {/* <div className="text-[24px] mb-5   font-bold mx-auto w-fit my-4">
+          Causes
+        </div> */}
+        <div className="grid grid-cols-1 sm:grid-cols-2  md:grid-cols-3 gap-4 ">
+          {causes.map((cause) => (
+            <div
+              key={cause.id}
+              className="rounded-[40px]  border border-solid border-[#DFDFDF]  w-full"
+            >
+             
+              <div className="my-3 p-2 py-6">
+             {/*  
+                <div className="flex items-center font-semibold justify-center m-2 mx-4 rounded-t-[10px]">
+                  My Donation Provides
+                </div> */}
+             
+                <div className=" mb-2 mx-4 font-semibold flex text-[18px] rounded-t-[10px]">
+                  {cause.description}
+                </div>
+                <div className="flex-row flex px-5  justify-left gap-2 items-center">
+              <img
+                  src={cause.image}
+                  className="w-8 h-8 border-solid shadow-custom-1 border-[#DFDFDF] border rounded-full"
+                  alt={cause.title}
+                />
+                <div className="font-semibold text-[14px]">
+                  {cause.title}
+                <span className="block font-normal text-[12px]"> Atlanta, GA</span>
+                </div>
+                
               </div>
-              <div className="flex-row flex px-5  justify-left gap-2 items-center">
-            <img
-                src={cause.image}
-                className="w-8 h-8 border-solid shadow-custom-1 border-[#DFDFDF] border rounded-full"
-                alt={cause.title}
-              />
-              <div className="font-semibold text-[14px]">
-                {cause.title}
-              <span className="block font-normal text-[12px]"> Atlanta, GA</span>
               </div>
-              
+  
             </div>
-            </div>
+          ))}
+        </div>
+        </div>
+      }
 
-          </div>
-        ))}
-      </div>
-      </div>
+
+      {
+        showSearchResult && <NotFound/>
+      }
+
 
 
 
@@ -253,6 +263,7 @@ const Search = () => {
           <Footer />
         </div>
       </div>
+ 
     </div>
   );
 };

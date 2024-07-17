@@ -3,6 +3,7 @@ import signup from "../assets/signup.json";
 import Select from "react-tailwindcss-select";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
 
 const options = [
   { value: "environmental", label: "Animal" },
@@ -21,8 +22,11 @@ export default function CategoryDonor() {
     setAnimal(value);
   };
 
+  const { setRole } = useAuth();
   const handleContinue = () => {
-    navigate("/donor");
+    localStorage.setItem("isAuthenticated", "donar");
+    setRole("donar");
+    navigate("/");
   };
 
   const [animal, setAnimal] = useState(null);
