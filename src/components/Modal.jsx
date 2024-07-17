@@ -42,12 +42,19 @@ export default function Modal({open , setOpen}) {
                 <button
                   type="button"
                   className="bg-white rounded-md text-gray-400 hover:text-gray-500 focus:outline-none "
-                  onClick={() => setOpen(false)}
+                  onClick={() => {setOpen(false),setCard(false)}}
                 >
                   <span className="sr-only">Close</span>
                   <XIcon className="h-6 w-6" aria-hidden="true" />
                 </button>
               </div>
+{   card &&  <div onClick={()=>{setCard(false)}} className=" cursor-pointer absolute top-0 left-0 pt-4 pl-4">
+      <div  className="w-full flex gap-2 items-center justify-start">
+        <img src='back.png' className="w-[15px] h-[15px]"/>
+        <div className="font-bold text-[15px]">Back</div>
+      </div>
+      </div>}
+
            { !success &&
             <div className="bg-white px-4 pb-4 pt-5 ">
               <div className="">

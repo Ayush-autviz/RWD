@@ -66,7 +66,7 @@ export default function UnsubscribeModal({open , setOpen}) {
             <div className=" px-4 py-2 ">
       <>
 
-        <button  onClick={()=>{setActivated(false)}}
+        <button  onClick={()=>{setActivated(false),setOpen(false)}}
               className="bg-[#464645]  rounded-xl text-white py-3 w-full  hover:scale-105 duration-300"
             >
              Unsubscribe
