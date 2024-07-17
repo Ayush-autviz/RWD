@@ -4,9 +4,9 @@ const ChangePassword = () => {
   return (
                <div className='md:w-1/2 mx-auto mt-7'>
             <div className='w-full flex items-center justify-end'>
-            <p className="text-xs underline font-semibold   mb-2 text-secondary">
+            {/* <p className="text-xs underline font-semibold   mb-2 text-secondary">
         Forget Password?
-      </p>
+      </p> */}
       </div>
           <div className="relative">
            
