@@ -15,7 +15,7 @@ export default function Dropdown() {
     <>
     <Menu as="div" className="relative inline-block text-left">
       <div>
-        <MenuButton className="">
+        <MenuButton className="p-2 ">
         <img className="" src="Group 18.svg"/>
         </MenuButton>
       </div>
