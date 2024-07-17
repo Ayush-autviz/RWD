@@ -8,7 +8,7 @@ const DonateNowCard = ({open,setOpen}) => {
   const {activated , setActivated } = useActivation();
   return (
     <div className='flex justify-between items-center flex-col bg-white  lg:flex-row shadow-custom-1 px-[30px] py-[30px]  md:py-[50px] rounded-[10px] relative overflow-hidden '>
-    <img src='Ellipse2.svg' className='absolute bottom-0 left-0 z-[1] '/>
+    <img src='Ellipse2.svg' className='absolute bottom-0 left-0 '/>
     <div className='lg:order-1 order-2'>
      <div className='text-secondary center lg:text-left text-center font-poppins md:text-[25px] md:font-bold text-[16px] font-semibold leading-[30px]'>
      Your donation will provide
