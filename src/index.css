@@ -71,6 +71,10 @@ input[type='number'] {
   height: 8px;
 }
 
+.custom-gray {
+  filter: invert(41%) sepia(9%) saturate(245%) hue-rotate(175deg) brightness(94%) contrast(88%);
+}
+
 /* Track */
 .custom-scrollbar::-webkit-scrollbar-track {
   background: #f1f1f1;

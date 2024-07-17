@@ -63,8 +63,8 @@ export default function Modal({open , setOpen}) {
               </div>
 {  (card && !success) &&  <div onClick={()=>{setCard(false)}} className=" cursor-pointer absolute top-0 left-0 pt-4 pl-4">
       <div  className="w-full flex gap-2 items-center justify-start">
-        <img src='back.png' className="w-[15px] h-[15px]"/>
-        <div className="font-bold text-[15px]">Back</div>
+        <img src='back.svg' className="w-[19px] font-semibold h-[19px]"/>
+        <div className="font-bold text-gray-400 text-[15px]">Back</div>
       </div>
       </div>}
 
