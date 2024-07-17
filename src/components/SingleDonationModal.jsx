@@ -36,7 +36,7 @@ export default function SingleDonationModal({open , setOpen}) {
         <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
           <DialogPanel
             transition
-            className="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all data-[closed]:translate-y-4 data-[closed]:opacity-0 data-[enter]:duration-300 data-[leave]:duration-200 data-[enter]:ease-out data-[leave]:ease-in sm:my-8 sm:w-full sm:max-w-lg data-[closed]:sm:translate-y-0 data-[closed]:sm:scale-95"
+            className="relative p-6 transform overflow-hidden rounded-lg bg-white text-left shadow-xl  transition-all data-[closed]:translate-y-4 data-[closed]:opacity-0 data-[enter]:duration-300 data-[leave]:duration-200 data-[enter]:ease-out data-[leave]:ease-in sm:my-8 sm:w-full sm:max-w-lg data-[closed]:sm:translate-y-0 data-[closed]:sm:scale-95"
           >
                           <div className=" absolute top-0 right-0 pt-4 pr-4">
                 <button
@@ -60,12 +60,12 @@ export default function SingleDonationModal({open , setOpen}) {
                 <div className="mt-3 text-center  ">
                   <DialogTitle
                     as="h3"
-                    className="text-base font-semibold leading-6 text-gray-900"
+                    className="text-secondary center font-poppins md:text-[25px] md:font-bold text-[16px] font-semibold leading-[30px]"
                   >
                     Grocery Spot
                   </DialogTitle>
                   <div className="mt-2">
-                    <p className="text-sm text-gray-500">
+                    <p className="text-sm text-gray-500 ">
                       This is a recurring donation of $5 per month. Cancel
                       anytime.
                     </p>
@@ -83,12 +83,12 @@ export default function SingleDonationModal({open , setOpen}) {
             </div>
                   <DialogTitle
                     as="h3"
-                    className="text-base text-left font-semibold p-5 leading-6 text-gray-900"
+                    className="text-secondary center font-poppins md:text-[25px] md:font-bold text-[16px] font-semibold leading-[30px]"
                   >
                     Thank you for donating, Luke
                   </DialogTitle>
                   <div className="">
-                    <p className="text-sm text-left px-5 pb-5 text-gray-500">
+                    <p className="text-sm text-gray-500 pb-[22px]">
                      Share this cause with friends
                     </p>
                   </div>
@@ -97,7 +97,7 @@ export default function SingleDonationModal({open , setOpen}) {
             }
 
 
-            <div className="bg-[#FBFBFB] px-4 py-3 border  ">
+            <div className=" px-4 py-2  ">
       { !success && <>
         <div className="relative">
           <input
@@ -108,7 +108,7 @@ export default function SingleDonationModal({open , setOpen}) {
             value={donation}
           />
         </div>
-        <p className="text-sm font-semibold text-left my-2 pb-5 text-gray-500">
+        <p className="text-sm font-semibold text-right my-2 pb-5 text-gray-500">
            Min $5 USD
         </p>
         <button  onClick={()=>{setSuccess(true)}}

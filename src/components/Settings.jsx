@@ -66,7 +66,7 @@ const Settings = () => {
       { !selectedTabMd &&
       <div className="flex md:hidden flex-col gap-5">
       {
-        tabs.map((tab)=>(<div className=" w-[100%]   bg-white border-[0.5px] mx-auto rounded-full p-2">
+        tabs.map((tab)=>(<div className=" w-[100%] cursor-pointer  bg-white border-[0.5px] mx-auto rounded-full p-2">
           <div
             key={tab.id}
             href={tab.href}
@@ -89,7 +89,7 @@ const Settings = () => {
        }
 
       <nav
-        className=" w-fit hidden md:flex bg-white border-[0.5px] mx-auto rounded-full p-2 "
+        className=" w-fit hidden md:flex cursor-pointer bg-white border-[0.5px] mx-auto rounded-full p-2 "
         aria-label="Tabs"
       >
         {tabs.map((tab) => (
