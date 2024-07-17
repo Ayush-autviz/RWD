@@ -25,7 +25,7 @@ const DonateNowCard = ({open,setOpen}) => {
     </div>
     }
     </div>
-    <div className='mx-auto   mr-0 md:mt-0 hidden lg:order-1 order-2  md:block lg:relative z-[4]'>
+    <div className='mx-auto   lg:mr-0 md:mt-0 hidden lg:order-1 order-2  md:block lg:relative z-[4]'>
      <img className='w-[260px] h-[150px]  mt-3 lg:mt-0 object-cover rounded-full' src='foody.png'/>
 
      {/* <Lottie className='w-[220px] h-[233px]  ml-4 mt-[-40px] bg-red ' animationData={maingif} loop={true} /> */}

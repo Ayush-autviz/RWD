@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   Dialog,
   DialogBackdrop,
@@ -22,6 +22,17 @@ export default function SingleDonationModal({open , setOpen}) {
     const value = parseInt(event.target.value, 10);
       setDonation(value);
   };
+
+  const handleClose = () => {
+    setOpen(false);
+    setTimeout(() => {
+      setSuccess(false);
+    }, 3000); 
+  };
+
+  useEffect(()=>{
+     setSuccess(false);
+  },[])
   
 
 
@@ -33,16 +44,16 @@ export default function SingleDonationModal({open , setOpen}) {
       />
 
       <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
-        <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+        <div className="flex min-h-full items-center justify-center p-4 text-center sm:items-center sm:p-0">
           <DialogPanel
             transition
-            className="relative p-6 transform overflow-hidden rounded-lg bg-white text-left shadow-xl  transition-all data-[closed]:translate-y-4 data-[closed]:opacity-0 data-[enter]:duration-300 data-[leave]:duration-200 data-[enter]:ease-out data-[leave]:ease-in sm:my-8 sm:w-full sm:max-w-lg data-[closed]:sm:translate-y-0 data-[closed]:sm:scale-95"
+            className="relative p-6 transform overflow-hidden rounded-lg bg-white text-left shadow-xl  transition-all data-[closed]:translate-y-4 data-[closed]:opacity-0 data-[enter]:duration-300 data-[leave]:duration-200 data-[enter]:ease-out data-[leave]:ease-in sm:my-8 w-full sm:max-w-lg data-[closed]:sm:translate-y-0 data-[closed]:sm:scale-95"
           >
                           <div className=" absolute top-0 right-0 pt-4 pr-4">
                 <button
                   type="button"
                   className="bg-white rounded-md text-gray-400 hover:text-gray-500 focus:outline-none "
-                  onClick={() => setOpen(false)}
+                  onClick={() =>{handleClose()}}
                 >
                   <span className="sr-only">Close</span>
                   <XIcon className="h-6 w-6" aria-hidden="true" />

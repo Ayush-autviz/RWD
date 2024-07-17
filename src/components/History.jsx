@@ -17,21 +17,6 @@ const History = () => {
           <div className='font-bold text-[30px] text-[#4db510]'>+ $30</div>
           </div>
     </div>
-
-    <div className='p-3 rounded-[10px] border border-solid flex items-center justify-between border-[#DFDFDF] '>
-          <div className='flex flex-row gap-3'>
-            <img src='userp.jpg' className='w-[45px] p-1 object-cover  h-[45px] rounded-full border border-solid border-[#DFDFDF]' />
-            <div className='flex flex-col '>
-               <div className='font-semibold text-[16px]'>Luke Warm<span className='text-[14px] text-gray-400'> has</span></div>
-           
-               <div className='text-[14px] font-semibold text-gray-400'>donated $30 on 11 March,2024</div>
-           </div>
-          </div>
-          <div>
-          <div className='font-bold text-[30px] text-[#4db510]'>+ $30</div>
-          </div>
-    </div>
-
     </div>
     
   )
