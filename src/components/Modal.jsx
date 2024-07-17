@@ -107,7 +107,7 @@ export default function Modal({open , setOpen}) {
                   >
                     Thank you for donating, Luke
                   </DialogTitle>
-                  <div className="">
+                  <div className="mt-2">
                     <p className="text-sm text-gray-500 pb-[22px]">
                       You have activated your donar profile. Share this cause with friends
                     </p>

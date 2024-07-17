@@ -77,8 +77,7 @@ export default function SingleDonationModal({open , setOpen}) {
                   </DialogTitle>
                   <div className="mt-2">
                     <p className="text-sm text-gray-500 ">
-                      This is a recurring donation of $5 per month. Cancel
-                      anytime.
+                      This is a 1-time donation.
                     </p>
                   </div>
                 </div>
@@ -98,7 +97,7 @@ export default function SingleDonationModal({open , setOpen}) {
                   >
                     Thank you for donating, Luke
                   </DialogTitle>
-                  <div className="">
+                  <div className="mt-2">
                     <p className="text-sm text-gray-500 pb-[22px]">
                      Share this cause with friends
                     </p>
