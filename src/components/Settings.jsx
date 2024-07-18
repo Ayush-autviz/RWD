@@ -8,9 +8,10 @@ import PrivacyPolicy from "./PrivacyPolicy";
 import History from "./History";
 import HistoryNpo from "./HistoryNpo";
 import { useAuth } from "../context/AuthContext";
+import { useNavigate } from "react-router-dom";
 
 const Settings = () => {
-
+  const navigate = useNavigate();
   const {role} = useAuth();
   const [activeIndex, setActiveIndex] = useState(null);
 
@@ -66,11 +67,11 @@ const Settings = () => {
       { !selectedTabMd &&
       <div className="flex md:hidden flex-col gap-5">
       {
-        tabs.map((tab)=>(<div className=" w-[100%] cursor-pointer  bg-white border-[0.5px] mx-auto rounded-full p-2">
+        tabs.map((tab)=>(<div onClick={() => setSelectedTabMd(tab.id)} className=" w-[100%] cursor-pointer  bg-white border-[0.5px] mx-auto rounded-full p-2">
           <div
             key={tab.id}
             href={tab.href}
-            onClick={() => setSelectedTabMd(tab.id)}
+            
             className={classNames(
               selectedTabMd === tab.id
                 ? "bg-gray-100 text-gray-700 "
@@ -84,6 +85,13 @@ const Settings = () => {
           </div>
         ))
        }
+       <div  onClick={() => {localStorage.removeItem('isAuthenticated'), navigate('/login')}} className=" w-[100%] cursor-pointer  bg-white border-[0.5px] mx-auto rounded-full p-2">
+          <div
+           className='px-6 py-2 text-center font-medium text-sm rounded-full text-red-500 hover:text-red-600 '           
+          >
+           Logout
+          </div>
+       </div>
        </div>
        
        }

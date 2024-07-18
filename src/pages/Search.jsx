@@ -17,6 +17,7 @@ import { FreeMode, Pagination } from 'swiper/modules';
 import { useTabContext } from "../context/TabProvider";
 import Modal from "../components/Modal";
 import NotFound from "../components/NotFound";
+import { useNavigate } from "react-router-dom";
 
 const categories = [
     {
@@ -119,6 +120,8 @@ const Search = () => {
   const [showAll, setShowAll] = useState(false);
   const [showSearchResult,setShowSearchResult] = useState(false);
 
+  const navigate = useNavigate();
+
   const { selectedTab, setSelectedTab }= useTabContext();
 
   useEffect(()=>{
@@ -152,13 +155,13 @@ const Search = () => {
     </div>
          
             <label
-                class="mx-auto  relative bg-white min-w-sm max-w-2xl flex flex-row md:flex-row items-center justify-center shadow-custom-1 md:py-1 px-1  gap-2  focus-within:border-gray-300 rounded-full"
+                class="md:mx-auto  relative bg-white min-w-sm max-w-2xl flex flex-row md:flex-row items-center justify-center shadow-custom-1 md:py-1 px-1  gap-2  focus-within:border-gray-300 rounded-full"
                 for="search-bar">
 
                 <input id="search-bar" placeholder="Search CRWD" name="q"
-                    class="px-6 py-4 md:py-2 w-full rounded-full flex-1 outline-none bg-white md:min-w-[400px]" required=""/>
+                    class="px-6 py-3 md:py-2 w-full rounded-full flex-1 outline-none bg-white md:min-w-[400px]" required=""/>
                 <button onClick={()=>{setShowSearchResult(true)}} 
-                    class=" px-6 md:py-3 py-3 bg-gray-100 hover:scale-105  fill-white active:scale-95 duration-100 border will-change-transform overflow-hidden relative rounded-full transition-all">
+                    class=" px-6 md:py-2 py-2 bg-gray-100 hover:scale-105  fill-white active:scale-95 duration-100 border will-change-transform overflow-hidden relative rounded-full transition-all">
                     <div class="flex items-center transition-all opacity-1">
                         <span class="text-sm font-semibold whitespace-nowrap truncate mx-auto">
                             Search
@@ -170,7 +173,7 @@ const Search = () => {
         </div>
 
         </div>
-        <div className="mt-10 rounded-[40px]">
+        <div className="mt-4 rounded-[40px]">
         <div className="">
           <div className="w-full">
 
@@ -209,6 +212,7 @@ const Search = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2  md:grid-cols-3 gap-4 ">
           {causes.map((cause) => (
             <div
+              onClick={()=>{}}
               key={cause.id}
               className="rounded-[40px]  border border-solid border-[#DFDFDF]  w-full"
             >

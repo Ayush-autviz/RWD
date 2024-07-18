@@ -16,6 +16,7 @@ import DashboardDonar from "./pages/DashboardDonar";
 import { useAuth } from "./context/AuthContext";
 import ForgetPassword from "./components/ForgetPassword";
 import EmailPassword from "./components/EmailPassword";
+import ConnectStripe from "./pages/ConnectStripe";
 
 const getRoleFromLocalStorage = () => {
   const isAuthenticated = localStorage.getItem("isAuthenticated");
@@ -72,6 +73,7 @@ const App = () => {
         <Route path="/signupNP" element={<SignUpNP />} />
         <Route path="/categoryNP" element={<CategoryNP />} />
         <Route path="/categoryDonor" element={<CategoryDonor />} />
+        <Route path="/connectStripe" element={<ConnectStripe />} />
         <Route path="/email" element={<EmailPassword />} />
         <Route
           path="/verification"

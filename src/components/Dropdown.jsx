@@ -52,7 +52,7 @@ export default function Dropdown() {
             </a>
           </MenuItem>
 
-            <MenuItem>
+            {/* <MenuItem>
               <button
                 onClick={()=>{ localStorage.removeItem('isAuthenticated');
                   navigate('/login');}}
@@ -60,7 +60,7 @@ export default function Dropdown() {
               >
                 Sign out
               </button>
-            </MenuItem>
+            </MenuItem> */}
          
         </div>
       </MenuItems>

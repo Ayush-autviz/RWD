@@ -32,9 +32,7 @@ export default function CategoryNP() {
       };
       const { setRole } = useAuth();
       const handleContinue = () => {
-        localStorage.setItem("isAuthenticated", "npo");
-        setRole("npo");
-        navigate("/");
+        navigate("/connectStripe");
       };
 
     const [animal, setAnimal] = useState(null);
