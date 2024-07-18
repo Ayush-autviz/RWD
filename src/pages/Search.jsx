@@ -146,7 +146,7 @@ const Search = () => {
       </div>
       
       <div className="md:ml-[83px] flex-1 w-full overflow-y-auto flex flex-col">
-      <div className="flex-1  ml-0 pt-8  rounded-b-[40px] border border-solid border-[#DFDFDF] bg-[#e9e9e9]
+      <div className="flex-1  ml-0   rounded-b-[40px] border border-solid border-[#DFDFDF] bg-[#e9e9e9]
   flex flex-col  items-center py-[20px] px-[20px] ">
        
       <div className="w-full flex justify-center items-center ">
