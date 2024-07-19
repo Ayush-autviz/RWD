@@ -34,7 +34,7 @@ const ProfileCard = ({open,setOpen,openModal,setOpenModal}) => {
         Grocery Spot
       </div>
       <div className="h-[1px] w-full bg-[#DFDFDF] mt-5 hidden md:block" />
-      <div className="flex flex-row justify-center md:flex-col md:gap-6 gap-4 mt-4 w-full">
+      <div className="flex flex-row justify-center md:flex-col md:gap-6 gap-16 mt-4 w-full">
         <div className="text-center">
           <div className="text-secondary font-poppins text-[16px] md:text-[12px] font-medium md:mb-2 mb-0">
             Donations
@@ -51,14 +51,14 @@ const ProfileCard = ({open,setOpen,openModal,setOpenModal}) => {
             1K
           </div>
         </div>
-        <div className="text-center">
+        {/* <div className="text-center">
           <div className="text-secondary font-poppins text-[16px] md:text-[12px] font-medium  md:mb-2 mb-0">
             Collectives
           </div>
           <div className="text-secondary font-poppins text-[25px] md:text-[48px] font-semibold leading-[35px] md:leading-[40px]">
             37
           </div>
-        </div>
+        </div> */}
       </div>
     {!activated &&(  <>    <div onClick={()=>{setOpen(true)}} className="cursor-pointer rounded-[5px] mt-5 w-full  bg-[#464645]  hover:bg-[#2a2a29] duration-200 px-[12px] py-[13px] flex flex-row md:flex-col lg:flex-row gap-2 items-center justify-center">
         <div className="w-[39px] h-[39px] mr-2">
