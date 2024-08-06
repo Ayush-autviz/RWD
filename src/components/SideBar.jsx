@@ -36,7 +36,7 @@ const SideBar = () => {
     </div>
     <div onClick={() => {
       localStorage.removeItem('isAuthenticated');
-      navigate('/login');
+      navigate('/home');
     }}>
       <img className='cursor-pointer image-brown' src="humbleicons_logout.svg" alt="Logout" />
     </div>

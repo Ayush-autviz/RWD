@@ -85,7 +85,7 @@ const Settings = () => {
           </div>
         ))
        }
-       <div  onClick={() => {localStorage.removeItem('isAuthenticated'), navigate('/login')}} className=" w-[100%] cursor-pointer  bg-white border-[0.5px] mx-auto rounded-full p-2">
+       <div  onClick={() => {localStorage.removeItem('isAuthenticated'), navigate('/home')}} className=" w-[100%] cursor-pointer  bg-white border-[0.5px] mx-auto rounded-full p-2">
           <div
            className='px-6 py-2 text-center font-medium text-sm rounded-full text-red-500 hover:text-red-600 '           
           >
