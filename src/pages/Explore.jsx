@@ -155,10 +155,10 @@ const Explore = () => {
     </div>
          
             <label
-                class="md:mx-auto  relative bg-white min-w-sm max-w-2xl flex flex-row md:flex-row items-center justify-center shadow-custom-1 py-1 md:py-[2px] px-2  gap-2  focus-within:border-gray-300 rounded-full"
+                class="md:mx-auto  relative bg-white min-w-sm max-w-2xl flex flex-row md:flex-row items-center justify-center shadow-custom-1 py-3 md:py-[10px] px-4  gap-2  focus-within:border-gray-300 rounded-full"
                 for="search-bar">
 
-<img className="h-14 w-14" src="logo-rwd.svg" alt="Logo" />
+<img className="h-8 w-8 mx-2" src="logo.svg" alt="Logo" />
 
                 <button onClick={()=>{navigate('/login')}} 
                     class=" px-6 md:py-2 py-2 bg-gray-100 hover:scale-105  fill-white active:scale-95 duration-100 border will-change-transform overflow-hidden relative rounded-[10px] transition-all">
@@ -277,9 +277,7 @@ const Explore = () => {
 
         </div>
         </div>
-        <div className="fixed bottom-0 left-0 w-full md:hidden">
-          <Footer />
-        </div>
+
       </div>
  
     </div>
