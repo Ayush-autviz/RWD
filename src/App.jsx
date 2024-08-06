@@ -17,6 +17,7 @@ import { useAuth } from "./context/AuthContext";
 import ForgetPassword from "./components/ForgetPassword";
 import EmailPassword from "./components/EmailPassword";
 import ConnectStripe from "./pages/ConnectStripe";
+import Explore from "./pages/Explore";
 
 const getRoleFromLocalStorage = () => {
   const isAuthenticated = localStorage.getItem("isAuthenticated");
@@ -69,6 +70,7 @@ const App = () => {
             />
           }
         />
+        <Route path="/home" element={<Explore/>} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/signupNP" element={<SignUpNP />} />
         <Route path="/categoryNP" element={<CategoryNP />} />
