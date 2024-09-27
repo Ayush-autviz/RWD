@@ -5,6 +5,7 @@ import {  useNavigate } from 'react-router-dom';
 const StorySection = () => {
   const [commentText, setCommentText] = useState('');
   const [isOpen, setIsOpen] = useState(false);
+  const [expandedComments, setExpandedComments] = useState({});
 
   const navigate = useNavigate();
 
@@ -45,6 +46,14 @@ const StorySection = () => {
     }
   ];
 
+
+  const toggleReadMore = (id) => {
+    setExpandedComments((prevExpanded) => ({
+      ...prevExpanded,
+      [id]: !prevExpanded[id],
+    }));
+  };
+
   const handleReadMore = (comment) => {
     navigate('/stories');
   };
@@ -55,24 +64,12 @@ const StorySection = () => {
     setCommentText('');
   };
 
-  const renderCommentContent = (content) => {
-    const maxLength = 100;
-    if (content.length > maxLength) {
-      return (
-        <>
-          {content.slice(0, maxLength)} ...   {" "}
-          <span
-            className="text-[#4db510] font-medium underline cursor-pointer"
-            onClick={() => handleReadMore()}
-          >
-          
-            Read more
-          </span>
-        </>
-      );
-    }
-    return content;
+  const truncateText = (text, limit) => {
+    if (text.length <= limit) return text;
+    return `${text.slice(0, limit)}...`;
   };
+
+ 
 
   return (
     <section className="py-4 relative border border-solid border-[rgba(147, 0, 255, 0.10)]  rounded-[10px] mt-5">
@@ -129,7 +126,19 @@ const StorySection = () => {
                                     </div>
                                 </div>
                             </div>
-                            <p class="text-gray-800 text-sm font-normal leading-snug">{renderCommentContent(comment.content, comment)}</p>
+                            <p class="text-gray-800 text-sm font-normal leading-snug">
+                            {expandedComments[comment.id]
+                      ? comment.content
+                      : truncateText(comment.content, 100)}
+                    {comment.content.length > 100 && (
+                      <span
+                        className="cursor-pointer"
+                        onClick={() => toggleReadMore(comment.id)}
+                      >
+                        {expandedComments[comment.id] ?<span className='underline font-semibold text-[#4db510]'>Read Less</span> :<span className='underline font-semibold text-[#4db510]'>Read More</span>}
+                      </span>
+                    )}
+                            </p>
                         </div>
                         <div className='flex flex-row gap-2 mt-4'>
                              <div className='flex-row  px-2 py-1  rounded-full bg-[#e9e9e9] flex gap-2 justify-center items-center'>
