@@ -84,7 +84,7 @@ const ProfilePageDonor = () => {
                 </div>
                 <div className="text-center flex  item-center  flex-col md:flex-row-reverse md:items-end gap-2 justify-center">
                   <div className="text-secondary font-poppins text-[16px] md:text-[14px] font-medium mb-1">
-                    Supporting
+                    Invites
                   </div>
                   <div className="text-secondary font-poppins text-[25px]  font-semibold leading-[35px] md:leading-[40px]">
                     8

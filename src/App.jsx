@@ -18,6 +18,7 @@ import ForgetPassword from "./components/ForgetPassword";
 import EmailPassword from "./components/EmailPassword";
 import ConnectStripe from "./pages/ConnectStripe";
 import Explore from "./pages/Explore";
+import Stories from "./pages/Stories";
 
 const getRoleFromLocalStorage = () => {
   const isAuthenticated = localStorage.getItem("isAuthenticated");
@@ -88,6 +89,10 @@ const App = () => {
         <Route
           path="/search"
           element={<ProtectedRoute element={<Search />} />}
+        />
+          <Route
+          path="/stories"
+          element={<ProtectedRoute element={<Stories />} />}
         />
       </Routes>
     </div>

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import SideBar from "../components/SideBar";
 import CentreCard from "../components/CentreCard";
 import DashboardCard from "../components/DashboardCard";
@@ -10,10 +10,14 @@ import { useTabContext } from "../context/TabProvider";
 import ProfileCardDonor from "../components/ProfileCardDonor";
 import DonateNowCardDonor from "../components/DonateNowCardDonor";
 import AboutUsCardDonor from "../components/AboutUsCardDonor";
+import StorySection from "../components/StorySection";
+import InviteModal from "../components/InviteModal";
 
 const DashboardDonar = () => {
 
   const { selectedTab, setSelectedTab }= useTabContext();
+
+  const [open,setOpen] = useState(true);
 
   useEffect(()=>{
     setSelectedTab('home');
@@ -53,7 +57,9 @@ const DashboardDonar = () => {
         <div className="fixed bottom-0 left-0 w-full md:hidden">
           <Footer />
         </div>
+
       </div>
+      <InviteModal open={open} setOpen={setOpen} />
     </div>
   );
 };

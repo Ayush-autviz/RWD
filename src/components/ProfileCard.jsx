@@ -53,7 +53,7 @@ const ProfileCard = ({open,setOpen,openModal,setOpenModal}) => {
         </div>
         {/* <div className="text-center">
           <div className="text-secondary font-poppins text-[16px] md:text-[12px] font-medium  md:mb-2 mb-0">
-            Collectives
+            Invites
           </div>
           <div className="text-secondary font-poppins text-[25px] md:text-[48px] font-semibold leading-[35px] md:leading-[40px]">
             37

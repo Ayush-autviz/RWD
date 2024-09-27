@@ -10,6 +10,7 @@ import { useTabContext } from "../context/TabProvider";
 import Modal from "../components/Modal";
 import SingleDonationModal from "../components/SingleDonationModal";
 import UnsubscribeModal from "../components/UnsubscribeModal";
+import StorySection from "../components/StorySection";
 
 const Dashboard = () => {
   const [open, setOpen] = useState(false);
@@ -49,6 +50,7 @@ const Dashboard = () => {
               </div>
             </div>
             <AboutUsCard />
+            <StorySection/>
           </div>
         </CentreCard>
         <ProfileCard open={open} setOpen={setOpen} openModal={openModal} setOpenModal={setOpenModal}   className="order-1 md:order-2" />
