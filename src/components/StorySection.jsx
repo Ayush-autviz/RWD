@@ -66,7 +66,7 @@ const StorySection = () => {
 
   const truncateText = (text, limit) => {
     if (text.length <= limit) return text;
-    return `${text.slice(0, limit)}...`;
+    return `${text.slice(0, limit)}... `;
   };
 
  
@@ -128,7 +128,7 @@ const StorySection = () => {
                             </div>
                             <p class="text-gray-800 text-sm font-normal leading-snug">
                             {expandedComments[comment.id]
-                      ? comment.content
+                      ? comment.content + " "
                       : truncateText(comment.content, 100)}
                     {comment.content.length > 100 && (
                       <span
