@@ -90,10 +90,6 @@ const App = () => {
           path="/search"
           element={<ProtectedRoute element={<Search />} />}
         />
-          <Route
-          path="/stories"
-          element={<ProtectedRoute element={<Stories />} />}
-        />
       </Routes>
     </div>
   );
