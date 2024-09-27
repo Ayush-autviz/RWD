@@ -42,7 +42,7 @@ export default function InviteModal({open , setOpen}) {
               <div className="">
                 <div className="mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full ">
                   <img
-                    src="userp.jpg"
+                    src="https://pagedone.io/asset/uploads/1710226776.png"
                     className="h-12 w-12 rounded-full"
                   />
                 </div>
@@ -52,7 +52,7 @@ export default function InviteModal({open , setOpen}) {
                     className="text-secondary cursor-pointer center font-poppins md:text-[25px] md:font-bold text-[16px]  hover:underline font-semibold leading-[30px]"
                     onClick={() => {handleClose()}}
                   >
-                    Luke Warm
+                    Mia Thompson
                   </DialogTitle>
                   <div className="mt-2">
                     <p className="text-sm text-gray-500">
