@@ -19,7 +19,7 @@ const StorySectionScreen = ({ comment }) => {
   };
 
   return (
-    <section className="py-4 relative mx-4 rounded-[10px] mt-5">
+    <section className="py-4 relative  rounded-[10px] mt-5">
       <div className="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto">
         <div className="w-full flex-col justify-center items-center lg:gap-3 gap-3 inline-flex">
           <div className="w-full flex-col justify-center items-center gap-8 flex">

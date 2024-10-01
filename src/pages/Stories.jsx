@@ -41,7 +41,7 @@ const Stories = () => {
       Unfolding Your Story
       </div>
         </div>
-        <div className="p-[20px] mb-20 md:mb-7">
+        <div className="mb-20 md:mb-7">
         <StorySectionScreen comment={comment}/>
         </div>
 
