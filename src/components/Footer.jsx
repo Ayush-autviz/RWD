@@ -21,7 +21,7 @@ const Footer = () => {
           className={`w-[24px] ${
             selectedTab === "home" ? "filter-white" : "image-brown"
           }`}
-          src="home.svg"
+          src="/home.svg"
         />
       </div>
       <div
@@ -36,7 +36,7 @@ const Footer = () => {
           className={` w-[24px] ${
             selectedTab === "search" ? "filter-white" : ""
           }`}
-          src="mdi_search.svg"
+          src="/mdi_search.svg"
         />
       </div>
       <div
@@ -49,7 +49,7 @@ const Footer = () => {
       >
         <img
           className={`w-[24px] ${selectedTab === "user" ? "filter-white" : ""}`}
-          src="lucide_user.svg"
+          src="/lucide_user.svg"
         />
       </div>
     </div>
