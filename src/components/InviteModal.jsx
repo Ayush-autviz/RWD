@@ -68,7 +68,7 @@ export default function InviteModal({open , setOpen}) {
               </div>
             </div>
             <div className="justify-center items-center w-full flex">
-                <img className="h-10 w-10" src='handshake2.png'/>
+                <img className="h-8 w-9 object-fill" src='handh.png'/>
             </div>
           </DialogPanel>
         </div>

@@ -19,6 +19,7 @@ import EmailPassword from "./components/EmailPassword";
 import ConnectStripe from "./pages/ConnectStripe";
 import Explore from "./pages/Explore";
 import Stories from "./pages/Stories";
+import StorySectionScreen from "./components/StorySectionScreen";
 
 const getRoleFromLocalStorage = () => {
   const isAuthenticated = localStorage.getItem("isAuthenticated");
@@ -90,6 +91,7 @@ const App = () => {
           path="/search"
           element={<ProtectedRoute element={<Search />} />}
         />
+         <Route path="/story/:id" element={<Stories/>} />
       </Routes>
     </div>
   );

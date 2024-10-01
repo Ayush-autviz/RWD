@@ -7,22 +7,22 @@ import DonateNowCard from "../components/DonateNowCard";
 import AboutUsCard from "../components/AboutUsCard";
 import Footer from "../components/Footer";
 
-//swiper
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/free-mode";
-import "swiper/css/pagination";
+
 
 import { FreeMode, Pagination } from "swiper/modules";
 import { useTabContext } from "../context/TabProvider";
 import Modal from "../components/Modal";
 import NotFound from "../components/NotFound";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import StorySection from "../components/StorySection";
 import StorySectionScreen from "../components/StorySectionScreen";
 
 const Stories = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+  const { comment } = location.state || {};
+
+ // console.log(comment,"commenttt")
   return (
     <div className="flex flex-col md:flex-row">
       <div className="fixed top-0 left-0 h-full hidden md:block">
@@ -38,11 +38,11 @@ const Stories = () => {
       Groccery Spot
       </div>
       <div className="font-bold  text-[35px] text-[#464645]  md:max-w-[55%] text-center ">
-      Unfolding Your Stories
+      Unfolding Your Story
       </div>
         </div>
         <div className="p-[20px] mb-20 md:mb-7">
-        <StorySectionScreen/>
+        <StorySectionScreen comment={comment}/>
         </div>
 
         <div className="fixed bottom-0 left-0 w-full md:hidden">

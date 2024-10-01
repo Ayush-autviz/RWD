@@ -9,27 +9,27 @@ const SideBar = () => {
   return (
     <div className="h-[100vh] w-[82px] flex flex-col justify-between shadow-custom">
     <div className="cursor-pointer">
-      <img src="Frame 1.svg" alt="Logo" />
+      <img src="/Frame 1.svg" alt="Logo" />
     </div>
     <div className="flex flex-col gap-[61px] justify-between items-center">
       <Link onClick={() => setSelectedTab('home')} to='/'>
         <img 
           className={`cursor-pointer image-color ${selectedTab === 'home' ? 'green' : ''}`} 
-          src="ri_home-3-line.svg" 
+          src="/ri_home-3-line.svg" 
           alt="Home" 
         />
       </Link>
       <Link onClick={() => setSelectedTab('search')} to='/search'>
         <img 
           className={`cursor-pointer image-color ${selectedTab === 'search' ? 'green' : ''}`} 
-          src="mdi_search.svg" 
+          src="/mdi_search.svg" 
           alt="Search" 
         />
       </Link>
       <Link onClick={() => setSelectedTab('user')} to='/profile'>
         <img 
           className={`cursor-pointer image-color ${selectedTab === 'user' ? 'green' : ''}`} 
-          src="lucide_user.svg" 
+          src="/lucide_user.svg" 
           alt="User" 
         />
       </Link>
@@ -38,7 +38,7 @@ const SideBar = () => {
       localStorage.removeItem('isAuthenticated');
       navigate('/home');
     }}>
-      <img className='cursor-pointer image-brown' src="humbleicons_logout.svg" alt="Logout" />
+      <img className='cursor-pointer image-brown' src="/humbleicons_logout.svg" alt="Logout" />
     </div>
   </div>
   );

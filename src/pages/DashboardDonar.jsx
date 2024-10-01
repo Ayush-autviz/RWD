@@ -12,6 +12,7 @@ import DonateNowCardDonor from "../components/DonateNowCardDonor";
 import AboutUsCardDonor from "../components/AboutUsCardDonor";
 import StorySection from "../components/StorySection";
 import InviteModal from "../components/InviteModal";
+import StorySectionDonor from "../components/StorySectionDonor";
 
 const DashboardDonar = () => {
 
@@ -51,6 +52,7 @@ const DashboardDonar = () => {
               </div>
             </div>
             <AboutUsCardDonor />
+            <StorySectionDonor/>
           </div>
         </CentreCard>
         <ProfileCardDonor className="order-1 md:order-2" />

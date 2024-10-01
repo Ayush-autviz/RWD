@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import SideBar from "../components/SideBar";
 import CentreCard from "../components/CentreCard";
 import DashboardCard from "../components/DashboardCard";
@@ -17,6 +17,13 @@ const Dashboard = () => {
   const [openModal,setOpenModal] = useState(false);
   
   const { selectedTab, setSelectedTab }= useTabContext();
+
+  const storySectionRef = useRef(null);
+
+ 
+  const scrollToStorySection = () => {
+      storySectionRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
 
   useEffect(()=>{
     setSelectedTab('home');
@@ -50,10 +57,12 @@ const Dashboard = () => {
               </div>
             </div>
             <AboutUsCard />
-            <StorySection/>
+            <div ref={storySectionRef}  >
+            <StorySection />
+            </div>
           </div>
         </CentreCard>
-        <ProfileCard open={open} setOpen={setOpen} openModal={openModal} setOpenModal={setOpenModal}   className="order-1 md:order-2" />
+        <ProfileCard open={open} setOpen={setOpen} openModal={openModal} scrollToStorySection={scrollToStorySection} setOpenModal={setOpenModal}   className="order-1 md:order-2" />
         <div className="fixed bottom-0 left-0 w-full md:hidden">
           <Footer />
         </div>
