@@ -78,7 +78,7 @@ const StorySectionScreen = ({ comment }) => {
                   onClick={handleTearsOfJoyClick}
                 >
                   <div className="bg-white hover:scale-105 rounded-full justify-center items-center flex h-[30px] w-[30px]">
-                    😂
+                  🥹
                   </div>
                   <div className="rounded-full justify-center items-center flex p-[2px] w-4">
                     {tearsOfJoyCount}
