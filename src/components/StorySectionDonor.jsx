@@ -159,7 +159,7 @@ const StorySectionDonor = () => {
                     onClick={() => handleEmojiClick(comment.id, "tears_of_joy")}
                   >
                     <div className="bg-white hover:scale-105 rounded-full justify-center items-center flex h-[30px] w-[30px]">
-                      😂
+                    🥹
                     </div>
                     <div className="rounded-full justify-center items-center flex p-[2px] w-4">
                       {comment.tears_of_joy}
