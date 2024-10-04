@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import { useNavigate } from "react-router-dom";
@@ -7,6 +7,10 @@ const StorySection = () => {
   const [commentText, setCommentText] = useState("");
   const [isOpen, setIsOpen] = useState(false);
   const [expandedComments, setExpandedComments] = useState({});
+  const [loading, setLoading] = useState(false);
+  const [hasMore, setHasMore] = useState(true);
+
+
   const [comments, setComments] = useState([
     {
       id: 1,
@@ -42,9 +46,77 @@ const StorySection = () => {
       tears_of_joy: 5,
     },
   ]);
+
+  const observer = useRef();
+
+  // Function to simulate fetching new comments
+  const fetchMoreComments = () => {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        const newComments = [
+          {
+            id: comments.length+1,
+            author: "Mia Thompson",
+            avatar: "https://pagedone.io/asset/uploads/1710226776.png",
+            content:
+              "In vestibulum sed aliquet id turpis. Sagittis sed sed adipiscing velit habitant quam. Neque feugiat consectetur consectetur turpis. Fusce id ante euismod, fermentum purus eget, fermentum augue. Nam at felis sollicitudin, ultricies odio et, tempor nisi. Sed convallis, nunc non tincidunt elementum, nisi lorem laoreet lorem, a pretium arcu nulla ac ligula. Vivamus volutpat leo non turpis ultrices, nec interdum justo venenatis.",
+            time: "12 hours ago",
+            clap: 4,
+            heart: 3,
+            tears_of_joy: 5,
+          },
+          {
+            id: comments.length+2,
+            author: "Emma Davis",
+            avatar: "https://pagedone.io/asset/uploads/1710238051.png",
+            content:
+              "Rutrum enim commodo est tristique vitae ut porta euismod cras. Id quis at donec duis scelerisque. Diam magnis adipiscing tellus sapien diam neque porta nullam lectus. Nullam imperdiet velit sit amet ipsum ullamcorper, non gravida velit tempus. Integer tristique mi id nisl hendrerit dapibus. Proin ac dui sit amet felis fringilla ultrices. Curabitur malesuada malesuada magna, in luctus magna malesuada et.",
+            time: "2 days ago",
+            clap: 4,
+            heart: 3,
+            tears_of_joy: 5,
+          },
+          {
+            id: comments.length+3,
+            author: "James Miller",
+            avatar: "https://pagedone.io/asset/uploads/1710225753.png",
+            content:
+              "Lectus quis ac quis lectus elit. Dolor tortor eu tristique malesuada. Quis dictumst nulla vitae velit nisi. Etiam vitae quam sit amet ipsum efficitur vestibulum. Nam commodo sapien vel odio pulvinar, vel luctus enim scelerisque. Praesent ac nulla dictum, tincidunt turpis et, tincidunt dolor. Maecenas sit amet magna scelerisque, egestas ligula vel, hendrerit ante. Sed sit amet gravida erat, nec tempus odio.",
+            time: "5 days ago",
+            clap: 4,
+            heart: 3,
+            tears_of_joy: 5,
+          },
+        ];
+        resolve(newComments);
+      }, 1000); // Simulate 5 seconds delay
+    });
+  };
   
 
   const navigate = useNavigate();
+  const lastCommentRef = useRef(null);
+
+  useEffect(() => {
+    if (loading) return;
+    if (observer.current) observer.current.disconnect();
+    observer.current = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting && hasMore) {
+        setLoading(true);
+        fetchMoreComments().then((newComments) => {
+          if (newComments.length === 0) {
+            setHasMore(false); // Stop further requests if no more comments
+          } else {
+            setComments((prevComments) => [...prevComments, ...newComments]);
+          }
+          setLoading(false);
+        });
+      }
+    });
+    if (lastCommentRef.current) {
+      observer.current.observe(lastCommentRef.current);
+    }
+  }, [loading, hasMore]);
 
   const handlePlusClick = () => {
     setIsOpen(!isOpen);
@@ -126,10 +198,11 @@ const StorySection = () => {
             </div>
           </div>
           <div className="w-full flex-col justify-start items-start gap-8 flex">
-            {comments.map((comment) => (
+            {comments.map((comment,index) => (
               <div
                 key={comment.id}
                 className="w-full lg:p-8 p-5 bg-white rounded-[12px] border border-gray-200 flex-col justify-start items-start flex"
+                ref={index === comments.length - 1 ? lastCommentRef : null}
               >
                 <div className="w-full flex-col justify-start items-start gap-3.5 flex">
                   <div className="w-full justify-between items-center inline-flex">
@@ -211,7 +284,18 @@ const StorySection = () => {
                   </div>
                 </div>
               </div>
-            ))}
+              
+            ))
+            
+            
+            
+            }
+
+{loading && (
+  <div className="flex justify-center w-full items-center mb-3">
+   <img class="w-10 h-10 animate-spin green" src="https://www.svgrepo.com/show/199956/loading-loader.svg" alt="Loading icon"/>
+  </div>
+)}
           </div>
         </div>
       </div>
