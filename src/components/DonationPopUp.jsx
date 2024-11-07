@@ -47,7 +47,7 @@ export default function DonationPopUp({isOpen,setIsOpen}) {
         
         <div className="p-6">
           <div className="relative mb-8">
-            <div className="text-3xl font-semibold text-gray-900 mb-2">
+            <div className="text-[22px] font-semibold text-gray-900 mb-2">
               {slides[currentSlide].title}
             </div>
             <div className="text-4xl font-bold text-gray-900 mb-6">
