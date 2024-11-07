@@ -13,6 +13,7 @@ import AboutUsCardDonor from "../components/AboutUsCardDonor";
 import StorySection from "../components/StorySection";
 import InviteModal from "../components/InviteModal";
 import StorySectionDonor from "../components/StorySectionDonor";
+import DonationPopUp from "../components/DonationPopUp";
 
 const DashboardDonar = () => {
 
@@ -61,7 +62,8 @@ const DashboardDonar = () => {
         </div>
 
       </div>
-      <InviteModal open={open} setOpen={setOpen} />
+     {/* <InviteModal open={open} setOpen={setOpen} /> */}
+     <DonationPopUp isOpen={open} setIsOpen={setOpen} />
     </div>
   );
 };

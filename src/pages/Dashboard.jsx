@@ -11,23 +11,24 @@ import Modal from "../components/Modal";
 import SingleDonationModal from "../components/SingleDonationModal";
 import UnsubscribeModal from "../components/UnsubscribeModal";
 import StorySection from "../components/StorySection";
+import DonationPopUp from "../components/DonationPopUp";
 
 const Dashboard = () => {
   const [open, setOpen] = useState(false);
-  const [openModal,setOpenModal] = useState(false);
-  
-  const { selectedTab, setSelectedTab }= useTabContext();
+  const [isOpen, setIsOpen] = useState(true);
+  const [openModal, setOpenModal] = useState(false);
+
+  const { selectedTab, setSelectedTab } = useTabContext();
 
   const storySectionRef = useRef(null);
 
- 
   const scrollToStorySection = () => {
-      storySectionRef.current?.scrollIntoView({ behavior: "smooth" });
+    storySectionRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
-  useEffect(()=>{
-    setSelectedTab('home');
-  })
+  useEffect(() => {
+    setSelectedTab("home");
+  });
   return (
     <div className="flex flex-col md:flex-row bg-white">
       <div className="fixed top-0 left-0 h-full hidden md:block">
@@ -49,27 +50,34 @@ const Dashboard = () => {
                 text="received the NAACP award for non-profit achievement 2024"
               />
               <div className=" md:col-span-2  lg:col-span-1">
-              <DashboardCard
-                image="mission (1).png"
-                heading="Our Mission is to"
-                text="eliminate food poverty across the metro-Atlanta area. Our mission is to eliminate food poverty across the metro-Atlanta area"
-              />
+                <DashboardCard
+                  image="mission (1).png"
+                  heading="Our Mission is to"
+                  text="eliminate food poverty across the metro-Atlanta area. Our mission is to eliminate food poverty across the metro-Atlanta area"
+                />
               </div>
             </div>
             <AboutUsCard />
-            <div ref={storySectionRef}  >
-            <StorySection />
+            <div ref={storySectionRef}>
+              <StorySection />
             </div>
           </div>
         </CentreCard>
-        <ProfileCard open={open} setOpen={setOpen} openModal={openModal} scrollToStorySection={scrollToStorySection} setOpenModal={setOpenModal}   className="order-1 md:order-2" />
+        <ProfileCard
+          open={open}
+          setOpen={setOpen}
+          openModal={openModal}
+          scrollToStorySection={scrollToStorySection}
+          setOpenModal={setOpenModal}
+          className="order-1 md:order-2"
+        />
         <div className="fixed bottom-0 left-0 w-full md:hidden">
           <Footer />
         </div>
       </div>
-      <SingleDonationModal open={openModal} setOpen={setOpenModal}/>
-      <Modal open={open} setOpen={setOpen}/>
-      
+      <SingleDonationModal open={openModal} setOpen={setOpenModal} />
+      <Modal open={open} setOpen={setOpen} />
+      <DonationPopUp isOpen={isOpen} setIsOpen={setIsOpen} />
     </div>
   );
 };
