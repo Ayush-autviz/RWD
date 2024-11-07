@@ -56,7 +56,7 @@ export default function DonationPopUp({isOpen,setIsOpen}) {
             
             <div className="bg-[#464645]  text-white rounded-xl p-4 shadow-lg transform -rotate-2  hover:rotate-0 transition-transform">
               <div className="flex justify-between items-start mb-2">
-                <div className="text-sm">{slides[currentSlide].cardTitle}</div>
+                <div className="text-sm text-white">{slides[currentSlide].cardTitle}</div>
                 <div className="bg-green-500/50 rounded-full p-1">
                   <div className="w-3 h-3 rounded-full bg-white" />
                 </div>
