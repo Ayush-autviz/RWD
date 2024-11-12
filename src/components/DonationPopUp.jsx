@@ -7,9 +7,9 @@ export default function DonationPopUp({ isOpen, setIsOpen }) {
 
   const slides = [
     {
-      title: "Currently serving",
+      title: "Currently Serving",
       amount: "Atlanta, Georgia",
-      cardTitle: "Total donations",
+      cardTitle: "Total Donations",
       cardAmount: "174",
       cardSubtext: "+12% from last month",
       heading: "Welcome to CRWD",
@@ -34,7 +34,7 @@ export default function DonationPopUp({ isOpen, setIsOpen }) {
       cardSubtext: "Current focus areas",
       heading: "Get Started with CRWD",
       content:
-        "CRWD is all about recurring micro-donations—just $5 a month—making giving accessible and impactful for everyone. Welcome to the next generation of giving. Welcome to CRWD.",
+        "CRWD is all about recurring micro-donations-just $5 a month-making giving accessible and impactful for everyone. Welcome to the next generation of giving. Welcome to CRWD.",
     },
   ];
 
