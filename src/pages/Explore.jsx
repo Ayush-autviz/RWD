@@ -184,7 +184,7 @@ const Explore = () => {
         
         </div>
       <div className="font-bold mt-3 text-[35px] text-[#464645]  md:max-w-[55%] text-center ">
-      Find nonprofits in Atlanta to support for $5 month.
+      Choose a nonprofit to support for only $5 per month
       </div>
         </div>
         <div className="mt-4 rounded-[40px]">

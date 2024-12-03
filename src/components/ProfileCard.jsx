@@ -4,6 +4,7 @@ import Lottie from "lottie-react";
 import Dropdown from "./Dropdown";
 import share from "../assets/share.json";
 import { useActivation } from "../context/DonationContext";
+import Cancel from "./Cancel";
 
 const ProfileCard = ({
   open,
@@ -119,6 +120,7 @@ const ProfileCard = ({
                 Share this cause
               </div>
             </div>
+            <Cancel/>
           </div>
         )}
       </div>
