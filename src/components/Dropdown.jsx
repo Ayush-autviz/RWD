@@ -4,6 +4,7 @@ import UnsubscribeModal from './UnsubscribeModal';
 import { useState } from 'react';
 import { useActivation } from '../context/DonationContext';
 import { useAuth } from '../context/AuthContext';
+import Cancel from './Cancel';
 
 export default function Dropdown() {
   const {role} = useAuth();
@@ -65,7 +66,8 @@ export default function Dropdown() {
         </div>
       </MenuItems>
     </Menu>
-    <UnsubscribeModal open={unsubscribe} setOpen={setUnsubscribe}/>
+    {/* <UnsubscribeModal open={unsubscribe} setOpen={setUnsubscribe}/> */}
+    <Cancel isModalOpen={unsubscribe} setIsModalOpen={setUnsubscribe}/>
     </>
   )
 }

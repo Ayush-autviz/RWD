@@ -117,7 +117,7 @@ export const mockFollowers = [
   
             <div className="mt-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-4">Our Supporters</h3>
-              <div className="space-y-4 max-h-[300px] overflow-y-auto pr-2 custom-scrollbar">
+              <div className="space-y-4 max-h-[200px] overflow-y-auto pr-2 custom-scrollbar">
                 {mockFollowers.map((follower) => (
                     <div onClick={()=>navigation('/donor',{ state: { from: 'followersModal' }})}>
                   <FollowerItem key={follower.id} follower={follower} />

@@ -1,7 +1,7 @@
 
 
 import { useState } from 'react'
-import { CheckCircle, X } from 'lucide-react'
+import { CheckCircle, HeartCrack, X } from 'lucide-react'
 
 
 
@@ -12,6 +12,7 @@ export default function CancelSubscriptionModal({
   onClose = () => {}
 }) {
   const [stayConnected, setStayConnected] = useState(true)
+
 
   return (
     <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 z-50">
@@ -25,14 +26,15 @@ export default function CancelSubscriptionModal({
         </button>
 
         <div className="text-center space-y-4">
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-100 dark:bg-green-900">
-            <CheckCircle className="w-8 h-8 text-green-600 dark:text-green-400" />
-          </div>
+        <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-red-100 dark:bg-red-900">
+      <HeartCrack className="w-8 h-8 text-red-600 dark:text-red-400" />
+    </div>
+
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
             Subscription Cancelled
           </h2>
           <p className="text-gray-600 dark:text-gray-300">
-            Your {serviceName} subscription will remain active until <span className="font-semibold">{expiryDate}</span>.
+            Your support will remain active until <span className="font-semibold">{expiryDate}</span>.
           </p>
         </div>
 

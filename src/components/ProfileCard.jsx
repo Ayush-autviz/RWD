@@ -63,7 +63,7 @@ const ProfileCard = ({
             <div className="text-secondary font-poppins text-[16px] md:text-[12px] font-medium  md:mb-2 mb-0">
               Supporters
             </div>
-            <div className="text-secondary font-poppins text-[25px] md:text-[48px] font-semibold leading-[35px] md:leading-[40px]">
+            <div className="text-secondary font-poppins text-[25px] md:text-[48px] cursor-pointer font-semibold leading-[35px] md:leading-[40px]">
               1K
             </div>
           </div>
@@ -126,7 +126,7 @@ const ProfileCard = ({
                 Share this cause
               </div>
             </div>
-            <Cancel/>
+            {/* <Cancel/> */}
           </div>
         )}
       </div>
