@@ -12,11 +12,13 @@ import SingleDonationModal from "../components/SingleDonationModal";
 import UnsubscribeModal from "../components/UnsubscribeModal";
 import StorySection from "../components/StorySection";
 import DonationPopUp from "../components/DonationPopUp";
+import FollowersModal from "../components/FollowersModal";
 
 const Dashboard = () => {
   const [open, setOpen] = useState(false);
   const [isOpen, setIsOpen] = useState(true);
   const [openModal, setOpenModal] = useState(false);
+
 
   const { selectedTab, setSelectedTab } = useTabContext();
 
@@ -78,6 +80,7 @@ const Dashboard = () => {
       <SingleDonationModal open={openModal} setOpen={setOpenModal} />
       <Modal open={open} setOpen={setOpen} />
       <DonationPopUp isOpen={isOpen} setIsOpen={setIsOpen} />
+      
     </div>
   );
 };

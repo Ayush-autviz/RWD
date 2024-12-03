@@ -14,12 +14,17 @@ import StorySection from "../components/StorySection";
 import InviteModal from "../components/InviteModal";
 import StorySectionDonor from "../components/StorySectionDonor";
 import DonationPopUp from "../components/DonationPopUp";
+import { useLocation } from "react-router-dom";
 
 const DashboardDonar = () => {
+  const location = useLocation();
+  const from = location.state?.from==='followersModal';
+
+
 
   const { selectedTab, setSelectedTab }= useTabContext();
 
-  const [open,setOpen] = useState(true);
+  const [open,setOpen] = useState(from?false:true);
 
   useEffect(()=>{
     setSelectedTab('home');

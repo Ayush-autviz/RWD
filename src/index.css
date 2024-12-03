@@ -117,3 +117,24 @@ input[type='number'] {
   border-bottom: none;
 }
 
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: #e5e7eb;
+  border-radius: 9999px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: #464645;
+  border-radius: 9999px;
+}
+
+/* Firefox */
+.scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: #464645 #e5e7eb;
+}
+
+

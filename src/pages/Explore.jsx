@@ -18,6 +18,7 @@ import { useTabContext } from "../context/TabProvider";
 import Modal from "../components/Modal";
 import NotFound from "../components/NotFound";
 import { useNavigate } from "react-router-dom";
+import Foooter from "../components/Foooter";
 
 const categories = [
     {
@@ -266,7 +267,7 @@ const Explore = () => {
       }
 
 
-
+    <Foooter/>
 
 </div>
 

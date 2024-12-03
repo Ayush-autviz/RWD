@@ -5,6 +5,7 @@ import Dropdown from "./Dropdown";
 import share from "../assets/share.json";
 import { useActivation } from "../context/DonationContext";
 import Cancel from "./Cancel";
+import FollowersModal from "./FollowersModal";
 
 const ProfileCard = ({
   open,
@@ -15,6 +16,11 @@ const ProfileCard = ({
 }) => {
   const [clicked, setClicked] = useState(false);
   const { activated, setActivated } = useActivation();
+  const [followersModal,setFollowersModal] = useState(false);
+
+  const closefolowersModal = ()=>{
+    setFollowersModal(false);
+  }
   return (
     <div className="min-w-[25%] bg-[#FBFBFB] ">
       <div className="bg-[#FBFBFB] flex flex-row items-center justify-between p-5 md:hidden">
@@ -53,7 +59,7 @@ const ProfileCard = ({
               270
             </div>
           </div>
-          <div className="text-center">
+          <div className="text-center" onClick={()=>{setFollowersModal(true)}} >
             <div className="text-secondary font-poppins text-[16px] md:text-[12px] font-medium  md:mb-2 mb-0">
               Supporters
             </div>
@@ -124,6 +130,7 @@ const ProfileCard = ({
           </div>
         )}
       </div>
+      <FollowersModal isOpen={followersModal} setIsOpen={setFollowersModal}/>
     </div>
   );
 };
