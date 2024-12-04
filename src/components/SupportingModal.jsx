@@ -78,7 +78,7 @@ export const mockFollowers = [
 
 
 
-  export default function FollowersModal({ isOpen, setIsOpen }) {
+  export default function SupportingModal({ isOpen, setIsOpen }) {
     if (!isOpen) return null;
     const navigation = useNavigate();
   
@@ -95,19 +95,19 @@ export const mockFollowers = [
           <div className="p-6">
             <div className="relative my-8">
             <div className="text-[22px] font-semibold text-gray-900 mb-4">
-            Groccery Spot's Amazing Supporters
+            Luke Warm's  Support
             </div>
               <div className="bg-[#464645] text-white rounded-xl p-4 shadow-lg -rotate-2  hover:rotate-0 transform transition-transform">
                 <div className="flex justify-between items-start mb-2">
                 <div className="text-sm text-white">
-                Contributors
+                I Support
                 </div>
                   <div className="bg-green-500/50 rounded-full p-1">
                     <div className="w-3 h-3 rounded-full bg-white" />
                   </div>
                 </div>
                 <div className="text-2xl font-bold mb-1">
-                  1K
+                  8 Causes
                 </div>
                 {/* <div className="text-sm text-white">
                   +12% from last month

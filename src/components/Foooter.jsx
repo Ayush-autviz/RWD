@@ -6,7 +6,7 @@ export default function Foooter() {
       <div className="max-w-7xl mx-auto py-8 px-4 ">
         <div className="flex flex-col  justify-between items-center">
           <div className="mb-4 ">
-            <p className="text-lg text-[#464645] font-medium">&copy; 2024 CRWD Collective. All rights reserved.</p>
+            <p className="text-lg text-[#464645] text-center font-medium">&copy; 2024 CRWD Collective. All rights reserved.</p>
           </div>
           <nav className="flex space-x-4">
             <div 
