@@ -2,9 +2,12 @@ import React, { useState } from "react";
 import share from "../assets/share.json";
 import Lottie from "lottie-react";
 import Dropdown from "./Dropdown";
+import SupportingModal from "./SupportingModal";
 
 const ProfileCardDonor = () => {
   const [clicked, setClicked] = useState(false);
+  const [supportingModal,setSupportingModal] = useState(false);
+
   return (
     <div className="min-w-[25%] bg-[#FBFBFB] ">
       <div className="bg-[#FBFBFB] flex flex-row items-center justify-between p-5 md:hidden">
@@ -41,7 +44,7 @@ const ProfileCardDonor = () => {
             </div>
           </div>
 
-          <div className="text-center">
+          <div onClick={()=>{setSupportingModal(true)}} className="text-center cursor-pointer">
             <div className="text-secondary font-poppins text-[16px] md:text-[12px] font-medium  md:mb-2 mb-0">
               Supporting
             </div>
@@ -109,6 +112,7 @@ const ProfileCardDonor = () => {
           </div>
         </div>
       </div>
+      <SupportingModal isOpen={supportingModal} setIsOpen={setSupportingModal}/>
     </div>
   );
 };
