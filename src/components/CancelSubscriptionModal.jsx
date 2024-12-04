@@ -33,12 +33,12 @@ export default function CancelSubscriptionModal({
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
             Subscription Cancelled
           </h2>
-          <p className="text-gray-600 dark:text-gray-300">
+          {/* <p className="text-gray-600 dark:text-gray-300">
             Your support will remain active until <span className="font-semibold">{expiryDate}</span>.
-          </p>
+          </p> */}
         </div>
 
-        <div className="bg-gray-50 dark:bg-gray-700 rounded-xl p-4 space-y-3">
+        {/* <div className="bg-gray-50 dark:bg-gray-700 rounded-xl p-4 space-y-3">
           <div className="flex items-center justify-between">
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Stay in the loop</h3>
             <button
@@ -60,13 +60,13 @@ export default function CancelSubscriptionModal({
           <p className="text-sm text-gray-600 dark:text-gray-300">
             Receive updates and access free content as a community member.
           </p>
-        </div>
+        </div> */}
 
         <button
           onClick={onSave}
           className="bg-[#464645]  rounded-xl text-white py-3 w-full  hover:scale-105 duration-300"
         >
-          Confirm Changes
+          Save & Continue
         </button>
       </div>
     </div>
